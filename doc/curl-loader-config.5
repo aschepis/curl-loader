@@ -1,0 +1,723 @@
+.\" Copyright (C) 2007 by John Gatewood Ham
+.\"
+.\" The man pages is licensed under the terms of the GNU 
+.\" General Public License version 2 as
+.\" published by the Free Software Foundation.
+.TH curl\-loader\-config 5 "January 10, 2012" "Version 0.56"
+.SH NAME
+.nh
+.B curl\-loader\-config
+\- description of curl-loader configuration file
+.SH DESCRIPTION
+The
+.B curl\-loader
+.nh
+program is an open source tool written in the C language.  It is used
+for simulating application load and application behavior of many HTTP/HTTPS and 
+FTP/FTPS clients accessing a server machine.  To control the
+.B curl\-loader
+tool, you need to specify a configuration file.  This file will contain
+the universal resource locators (URLs) that the tool will try to fetch.
+There are also many other settings you can specify in the file.  The
+file you create to control
+.B curl\-loader
+is officially called the
+.B "loading configuration file"
+This file is specified when you run the
+.B curl\-loader
+tool using the
+.B "\-f"
+option.
+.P
+The loading configuration file (also known as the batch configuration file)
+consisits of two sections.  The first section is for general settings 
+and the second section contains one or more URLs and the associated settings
+for them.  Each line has a simple tag=value format.  Blank lines are ignored,
+and lines that begin with the '#' character are comment lines and are
+ignored.  The tag=value format permits optional whitespace (blanks or tabs) on
+either side of the '=' operator.  Here is a simple example loading 
+configuration file:
+.nf
+
+########### GENERAL SECTION ##################
+BATCH_NAME=smalltest
+CLIENTS_NUM_MAX=10
+CLIENTS_NUM_START=1
+CLIENTS_RAMPUP_INC=2
+INTERFACE =eth0
+NETMASK=255.255.255.0 
+IP_ADDR_MIN= 192.168.0.1
+IP_ADDR_MAX= 192.168.0.255
+CYCLES_NUM= -1
+URLS_NUM= 1
+
+########### URLs SECTION #######################
+URL=http://targethost/somefile.html
+URL_SHORT_NAME="somefile"
+REQUEST_TYPE=GET
+TIMER_URL_COMPLETION = 0
+TIMER_AFTER_URL_SLEEP = 0
+
+.fi
+.P
+Here you see that the name of this batch is smalltest.  
+This name is used in the generated files and also for
+the statistics displayed while the 
+.B curl\-loader
+is running.  This batch will have 10 clients, starting
+with 1 and adding by 2 clients per second until there
+are 10 total clients.  The networking will use eth0
+and use a class C private address and the addresses will
+begin with 192.168.0.1 for the first client.  The
+number of cycles is -1, which means repeat until the
+user presses ctl-C.  The number of URLs is one, so we
+need to have one URL in the second section of the file.
+.P
+The URL is specified with the URL tag and will access
+the machine targethost and get the file /somefile.html.
+This URL has the short name somefile that will be used
+for the statistics displayed while the
+.B curl\-loader
+runs.  This is a http URL and the method used to obtain
+it will be a GET.  There will be no pause between fetches,
+and there is no timeout for the time it takes for a fetch
+to complete.
+.SH TAGS
+.P
+There are many tags available to control the behavior of your
+.B curl\-loader
+testing.  There are tags for the general section, and tags for
+the URL section.  Each tag description here will indicate if this
+is a tag for the general section or the URL section.
+.TP
+.B BATCH_NAME
+.nh
+This requires a string value and is used to name the batch.  This
+name is used for the display while the
+.B curl\-loader
+is running, and also for the three generated files.  
+This is a tag for the general section.
+.TP
+.B CLIENTS_NUM_MAX
+.nh
+This requires an unsigned integer value and is used to specify the
+maximum number of clients to be used for this batch.
+This is a tag for the general section.
+.TP
+.B CLIENTS_NUM_START
+.nh
+This requires an unsigned integer value and is used to specify the
+number of clients to use when the
+.B curl\-loader
+program is first started.  If this number is less than the number
+specified by 
+.B CLIENTS_NUM_MAX
+then the
+.B cur\-loader
+tool will add more clients every second.  The number of new clients
+to add is specified by the 
+.B CLIENTS_RAMPUP_INC
+tag.  This is a tag for the general section.
+.TP
+.B CLIENTS_RAMPUP_INC
+.nh
+This requires an unsigned integer value and is used to specify the
+number of clients to add each second when the value of the
+.B CLIENTS_NUM_START
+tag is less than the value of the
+.B CLIENTS_NUM_MAX
+tag.  This is a tag for the general section.
+.TP
+.B INTERFACE
+.nh
+This requires a valid interface name and specifies the interface
+that will be used for connecting to the server(s) specified in the
+URLs of the URL section.  You can do:
+.nf
+ls /sys/class/net or run /sbin/ifconfig or /sbin/ip addr
+.fi
+to get the names of your network interfaces.  Normally you would
+use something like eth0.  This is a tag for the general section.
+.TP
+.B NETMASK
+.nh
+This requires a valid netmask as the value.  For IPv4 you can use
+either a traditional dotted-quad specification like 255.255.255.0,
+or you you can use a CIDR number like 24.  For IPv6 only CIDR values
+from 0 to 128 are supported.  Enable IPv6 in Makefile. This is a tag for the general section.
+.TP
+.B IP_ADDR_MIN
+This requires a valid IP address as the value.  This is the first
+address to use and the first client you create will use this as its
+source address.  The 
+.B curl\-loader
+tool supports two operating modes.  In the first mode, a secondary IP
+is used for each client and added to the network interface.  The first client 
+gets IP_ADDR_MIN, then each new client will increment this by one and
+use that address, until the 
+.B IP_ADDR_MAX 
+is reached and the address will wrap back to IP_ADDR_MIN.  In the
+second mode, you specify the only IP, optionally to be the real address for the 
+interface specified in the 
+.B INTERFACE
+tag, and you use it for IP_ADDR_MIN and IP_ADDR_MAX and all clients
+use the only IP-address.  This is a tag for the general 
+section.
+.TP
+.B IP_ADDR_MAX
+This requires a valid IP address as the value.  This is the last
+address from your address pool.  See the discussion for the
+.B IP_ADDR_MIN
+tag.
+This is a tag for the general section.
+.TP
+.B IP_SHARED_NUM
+This requires a positive number of IP-addresses, that will be assigned by
+the program to its virtual clients evenly. When the number is one, it is equivalent to
+the only IP-address, described in the
+.B IP_ADDR_MIN tag section. The option enables to overcome
+a limit of 64K clients per IP without using a dedicated IP-address
+for each client.
+This is a tag for the general section.
+.TP
+.B CYCLES_NUM
+This requires a valid signed integer value.  This is the number of
+cycles to be performed.  If the value is -1, the 
+.B curl\-loader
+tool cycles forever until you hit ctl-C.  This is a tag for the 
+general section.
+.TP
+.B USER_AGENT
+This requires a valid quoted string value.  This is a way to override the
+default MS IE-6-like HTTP header User-Agent.  This will be used for
+all URLs.  If you want to set it only for a particular URL, see the
+.B HEADER
+tag.  This is a tag for the general section.
+.TP
+.B URLS_NUM
+This requires a valid unsigned integer value.  This is the number of
+URLs in the URL section.  This is a tag for the general section.
+.TP
+.B URL
+This is the first tag of a URL subsection.  It must be a valid URL
+supported by the
+.B curl\-loader
+tool.  Valid URLs for downloading with
+.B curl\-loader
+must start with "http://", "https://", or "ftp://".  The one exception
+to this rule is when the URL is blank because the 
+.B URL_USE_CURRENT
+is included and set to 1 in this URL section.  Upload URLs will
+need to have a file name, but download URLs can end with a "/".
+This is a tag for the URL section.
+.TP
+.B URL_SHORT_NAME
+.nh
+This optional tag requires an ASCII string with at most 12 characters.
+It is used for the operational statistics display while the
+.B cur\-loader
+tool is running.
+This is a tag for the URL section.
+.TP
+.B URL_USE_CURRENT
+.nh
+This optional tag is used when the URL is empty and is set to the integer 1.
+It is used to indicate that the current URL from the last operation should
+be used.  This is used for example when doing an http POST.
+This is a tag for the URL section.
+.TP
+.B URL_DONT_CYCLE
+.nh
+This optional tag is used to indicate that this URL should be run only
+once.  This would be used in the first URL section for a login sequence,
+and in the last URL section for a logout sequence.
+This is a tag for the URL section.
+.TP
+.B REQUEST_TYPE
+.nh
+This tag is required for all http and https URLs.  It requires a string
+value of "GET", "POST", "PUT", "DELETE" or "HEAD".  URLs for ftp should
+.I not
+use this tag.
+This is a tag for the URL section.
+.TP
+.B UPLOAD_FILE
+.nh
+This optional tag requires a string value.  This value is a full specifiation 
+for a file to be uploaded including the path and filename.
+This is a tag for the URL section.
+.TP
+.B HEADER
+.nh
+This optional tag requires a string value.  This is used to send a 
+custom request header. The tag can be used either to add a new header
+to the loader defaults or to overwrite the header value, used by the defaults.
+This is a tag for the URL section.
+.TP
+.B USERNAME
+.nh
+This optional tag requires a string value.  It is used to provide
+the login username for URLs that require a user name.
+This is a tag for the URL section.
+.TP
+.B PASSWORD
+.nh
+This optional tag requires a string value.  It is used to provide
+the login password for URLs that require a password.  This string
+can be empty.
+This is a tag for the URL section.
+.TP
+.B FORM_USAGE_TYPE
+.nh
+This optional tag requires a string value.  It is used to control 
+the user login process.  The value "UNIQUE_USERS_AND_PASSWORDS" is used
+to generate unique usernames and passwords by appending client
+sequence numbers to 
+.B USERNAME
+and
+.B PASSWORD
+tag values with the
+.B FORM_STRING
+template.  The value "SINGLE_USER" is used when you want to use
+the 
+.B USERNAME
+and
+.B PASSWORD
+without changing them.  The value "RECORDS_FROM_FILE" is used to
+tell the
+.B curl\-loader
+to load user names and passwords from the file file specified by the
+.B FORM_RECORDS_FILE
+tag.  The value "AS_IS" means that the 
+.B FORM_STRING
+template is to be used literally without any user name or password
+substitution.  The value "UNIQUE_USERS_SAME_PASSWORD" is used to
+generate unique users, but have all of them share a common password.
+This is a tag for the URL section.
+.TP
+.B FORM_STRING
+.nh
+This optional tag requries a valid string value.  This is the
+configurable template form to be use for POST-ing creditials.
+For example, if you want to have unique user names and passwords,
+you could do this:
+.nf
+
+FORM_USAGE_TYPE="UNIQUE_USERS_AND_PASSWORDS"
+FORM_STRING="username=%s%d&password=%s%d"
+USERNAME="robert"
+PASSWORD="stam"
+
+.fi
+This will result in the first client using "username=robert1&password=stam1",
+the next using "username=robert2&password=stam2", etc.  If you want many
+users but they all share one password, try this:
+.nf
+
+FORM_USAGE_TYPE="UNIQUE_USERS_SAME_PASSWORD"
+FORM_STRING="username=%s%d&password=%s"
+USERNAME="robert"
+PASSWORD="stam"
+
+.fi
+You will get "user=robert1&password=stam", then "user=robert2&password=stam",
+etc.  If you want to always use the same user name and password, try this:
+.nf
+
+FORM_USAGE_TYPE="SINGLE_USER"
+FORM_STRING="username=%s&password=%s"
+USERNAME="robert"
+PASSWORD="stam"
+
+.fi
+Every time you will have "user=robert&password=stam".  If
+you are using credentials from a file, you would use this:
+.nf
+
+FORM_RECORDS_FILE="./credentials.txt"
+FORM_USAGE_TYPE="RECORDS_FROM_FILE"
+FORM_STRING="username=%s&password=%s"
+
+.fi
+The 
+.I credentials.txt
+file would have these contents:
+.nf
+user1:pass1
+user2:pass2
+.fi
+This is a tag for the URL section.
+.TP
+.B FORM_RECORDS_FILE
+.nh
+This optional tag requries a string value.  This specifies the path
+to the file with credentails used when the 
+.B FORM_USAGE_TYPE
+is set to the value "RECORDS_FROM_FILE".
+This is a tag for the URL section.
+.TP
+.B WEB_AUTH_METHOD
+.nh
+This optional tag requires a string value.  This tag specifies the 
+type of authentication to use for http and https.  Value values are:
+"BASIC", "DIGEST", "GSS_NEGOTIATE", "NTLM", or "ANY".  The configured
+method will be used for authentication on http 401 response.  When
+"ANY" is configured, libcurl will choose a method.  To use "GSS_NEGOTIATE"
+the libcurl should be re\-compiled with support for GSS.
+This is a tag for the URL section.
+.TP
+.B WEB_AUTH_CREDIENTAILS
+.nh
+This optional tag requires a string value.  The value should be in the
+form "user:password" and this will override the 
+.B USERNAME
+and
+.B PASSWORD
+tags for creating the user name / password pair.
+This is a tag for the URL section.
+.TP
+.B PROXY_AUTH_METHOD
+.nh
+This optional tag requires a string value.  This tag specifies the 
+type of authentication to use for http and https.  Value values are:
+"BASIC", "DIGEST", "GSS_NEGOTIATE", "NTLM", or "ANY".  The configured
+method will be used for authentication on http 407 response.  When
+"ANY" is configured, libcurl will choose a method.  To use "GSS_NEGOTIATE"
+the libcurl should be re\-compiled with support for GSS.
+This is a tag for the URL section.
+.TP
+.B PROXY_AUTH_CREDENTIALS
+This optional tag requires a string value.  The value should be in the
+form "user:password" and this will override the 
+.B USERNAME
+and
+.B PASSWORD
+tags for creating the user name / password pair.
+This is a tag for the URL section.
+.TP
+.B FRESH_CONNECT
+.nh
+This optional tag requries an unsigned integer value.  If set to 1,
+the client will close the connection to the server after each action,
+and reopen a new connection.  The built\-in default is to re\-use a connection.
+The command-line argument
+.B "\-r"
+to the
+.B curl\-loader
+tool changes the default to always require a fresh connection.  This
+.B FRESH_CONNECT
+tag allows you to set that for a particular URL.
+This is a tag for the URL section.
+.TP
+.B TIMER_TCP_CONN_SETUP
+.nh
+This optional tag requires an unsigned integer value.  It specifies the
+time in seconds for DNS resolving and TCP connection setup for a URL.
+The global default is 5 seconds.
+The command-line argument
+.B "\-c"
+to the
+.B curl\-loader
+tool changes the default value.  This tag allows you to set this for
+a particular URL.
+This is a tag for the URL section.
+.TP
+.B TIMER_URL_COMPLETION
+.nh
+This optional tag requires an unsigned integer value.  This specifies the
+time in milliseconds to wait for a url fetching operation to complete.
+If the value is 0, this means there is no time limit enforced.
+If the value is greater than 0, then if the fetch is not completed in
+that amount of time, the fetch is cancelled and is considered a time out.
+Values between 1 and 19 should not be used because the operating system and
+curl-loader cannot enforce such short timers.
+This is a tag for the URL section.
+.TP
+.B TIMER_AFTER_URL_SLEEP
+.nh
+This optional tag requires an unsigned integer value.  This specifies the
+time in milliseconds for a client to sleep after finishing a fetch.  The
+value 0 means do not sleep at all, but instead immediately continue.
+Random timer values could be an option specified as e.g. 0-2000,
+which means, that a client will sleep for some random time from 0 to 2000 
+milliseconds.
+This is a tag for the URL section.
+.TP
+.B FTP_ACTIVE
+This optional tag requires an unsigned integer value.  By default the
+.B curl\-loader
+tool uses passive mode for ftp activity.  If this tag is set to 1, then
+the active mode is used instead.
+This is a tag for the URL section.
+.TP
+.B LOG_RESP_HEADERS
+This optional tag requires an unsigned integer value.  By default the
+.B curl\-loader
+tool does not log response headers.  If this tag is set to 1, then
+the headers of responses are stored in files with the pattern
+cl-<client-num>-cycle-<cycle-num>.hdr where the actual client number
+and cycle number are substituted in.  Note that this can generate a lot 
+of files very quickly.
+This is a tag for the URL section.
+.TP
+.B LOG RESP_BODIES
+.nh
+This optional tag requires an unsigned integer value.  By default the
+.B curl\-loader
+tool does not log response bodies.  If this tag is set to 1, then
+the bodies of responses are stored in files with the pattern
+cl-<client-num>-cycle-<cycle-num>.body where the actual client number
+and cycle number are substituted in.  Note that this can generate a lot 
+of big files very quickly.
+This is a tag for the URL section.
+.TP
+.B RESPONSE_STATUS_ERRORS
+.nh
+.br
+Response codes of 4xx (without 401 and 407) and all 5xx are considered as 
+operational errors. On error client does not continue along with batch test
+plan, and instead tries another cycle. By using the tag one can either add a status to 
+the errors set or remove it. Sign + (plus) adds, - (minus) removes.
+For example,  the effect of RESPONSE_STATUS_ERRORS="+200,-404"
+is that 200 responses will be considered for that url as errors, whereas 404 
+will be considered as success.
+This is a tag for the URL section.
+.TP
+.B MULTIPART_FORM_DATA
+.nh
+This tag adds initial support for multipart form data POST-ing as in RFC1867.
+Several tags MULTIPART_FORM_DATA can be used for a url to post, 
+e.g. as in ./conf-examples/multipart-formdata-post.conf:
+.nf
+	
+   MULTIPART_FORM_DATA="yourname=Michael"
+   MULTIPART_FORM_DATA="filedescription=Cool text file with cool text inside"
+   MULTIPART_FORM_DATA="htmlcode=<HTML></HTML>;type=text/html"
+   MULTIPART_FORM_DATA="file=@cooltext.txt"
+   MULTIPART_FORM_DATA="coolfiles=@fil1.gif,fil2.txt,fil3.html"
+.fi
+
+The files to be uploaded are indicated by @ and to be located in the same directory
+as curl-loader. Context type may be specified using the syntax like ;type=text/html.
+.br
+.br
+Currently, the feature uses the strings provided AS_IS and does not generate
+any unique users, unique passwords or loads tokens from file.
+.br
+To prevent from sending "Expect: 100-continue", pass as a custom HTTP header
+HEADER="Expect: "
+.br
+.br
+This is a tag for the URL section.
+.TP
+.B TRANSFER_LIMIT_RATE
+This optional tag limits client maximum throughput for a url. 
+The value of the tag to be provided as bytes (not bits) per second.
+This is a tag for the URL section.
+.TP
+.B FETCH_PROBABILITY
+This optional tag allows to fetch a url with a certain run-time probability.
+The allowed values are in the range from 1 to 100 percents.
+This is a tag for the URL section.
+.TP
+.B FETCH_PROBABILITY_ONCE
+This optional tag enables for a client to make the decision regarding
+a URL fetching with the tag
+.B FETCH_PROBABILITY
+to be done only once (at the first cycle), and not at each cycle.
+This is a tag for the URL section.
+.TP
+.B FORM_RECORDS_RANDOM
+This optional tag allows to use for each virtual client not a pre-defined
+record, but a randomly chosen record. One can load a 10000 
+records from a records file using
+.B FORM_RECORDS_FILE
+tag and use the records in a random fashion for 1000 clients. The tag does not 
+ensure uniquickness of the records used for each virtual client. To use the
+tag properly, specify number of the records to be loaded, using tag
+.B FORM_RECORDS_FILE_MAX_NUM
+This is a tag for the URL section.
+.TP
+.B FORM_RECORDS_FILE_MAX_NUM
+This optional tag allows to load not from a records file, specified by tag
+.B FORM_RECORDS_FILE
+not the default number of records being the same as the maximum number
+of virtual clients
+.B CLIENTS_NUM_MAX,
+but some larger number, required by 
+.B FORM_RECORDS_RANDOM
+This is a tag for the URL section.
+
+.TP
+.B URL_TEMPLATE
+Yet another option to start a new url section (set of urls).
+Note, that the tags the 
+.B URL 
+and URL_TEMPLATE are mutually exclusive. 
+An example of URL_TEMPLATE usage is: URL_TEMPLATE= http://www.foo.com/user/%s/group/%s.
+.br
+URL_TEMPLATE allows an url to vary from client to client or from cycle to cycle. 
+As in 
+.B FORM_STRING
+, the %s markers will be replaced with appropriate strings 
+before the URL is fetched. The replacement values can be obtained either 
+statically from file using 
+.B URL_TOKEN_FILE
+or fetched dynamically by fetching token 
+from HTTP-responses using both
+.B RESPONSE_TOKEN
+and 
+.B URL_TOKEN
+tags.
+
+.TP
+.B RESPONSE_TOKEN
+There can be any number of 
+.B RESPONSE_TOKENs in an 
+.B URL 
+or 
+.N URL_TEMPLATE 
+subsections. 
+When curl-loader fetches the url, it will scan the server's response for all the response tokens. 
+If found, curl-loader will save the "value" of each response token for use in constructing later 
+.B URL_TEMPLATE 
+by using
+.B URL_TOKEN
+tag. For instance, if we specify RESPONSE_TOKEN = user_id, and if the server response contains user_id=1234, 
+then we will save the name-value pair "user_id, 1234". Different clients may well receive different 
+responses and save different values, thus constructing different urls from later templates.
+Note, that order of the RESPONSE_TOKENs in the url subsection is immaterial. Matches and values 
+are collected across response-packet boundaries. Once a value is collected from a particular 
+server response, the scanning for that token stops, and subsequent occurrences of that token in 
+the response will not trigger a new value collection. Finally, a RESPONSE_TOKEN with the same 
+name as one in a previous url will replace any previously collected value for that name.
+See, the usage example in ./conf-examples/url-template-resp-dynamic.conf
+
+.TP
+.B URL_TOKEN
+Such tags may occur in an 
+.B URL_TEMPLATE 
+subsection. Each URL_TOKEN 
+is taken in order and looked up in this client's bucket of saved 
+.B RESPONSE_TOKENs. 
+The value obtained is substituted for the next %s marker in the
+.B URL_TEMPLATE. 
+Thus, the order of the URL_TOKENs matters. There must be the same number of 
+URL_TOKENs as %s makers, and each URL_TOKEN must have a corresponding saved 
+.B RESPONSE_TOKEN 
+value, or an error results. Note that not all these values need 
+come from the same prior url the only requirement is that the needed value has 
+been obtained from some prior server response by this client. URL_TOKEN is mutually 
+exclusive with 
+.B URL_TOKEN_FILE
+tag, where tokens are loaded from file statically.
+.br
+See, the usage example in ./conf-examples/url-template-resp-dynamic.conf
+
+.TP
+.B URL_TOKEN_FILE
+This tag may occur in an 
+.B URL_TEMPLATE
+subsection, 
+and is mutually exclusive with URL_TOKEN tag. It specifies a file from which the 
+substitution tokens for the 
+.B URL_TEMPLATE
+will be taken. The pathname must be 
+absolute or relative to the curl-loader directory.
+The syntax for token files is a bit more permissive than the rules for scanning 
+server responses.
+.br
+.br
+(1) Each remaining line is parsed to obtain the tokens for constructing one url, so there 
+     must be as many tokens on each line as there are %s markers in the 
+.B URL_TEMPLATE. 
+.br
+(2) Tokens are runs of non-whitespace characters, or quoted strings, separated by whitespace.
+.br
+(3) Attention! If there is an extra token remaining in the line, it is saved as a cookie 
+     to be sent when the url is fetched.
+.br
+.br
+As the load runs, the pre-constructed urls are taken on demand, and if the 
+demand is greater than the supply, we start over from the first url. Thus, if the 
+number of urls is equal to the number of clients, each client will get the same 
+unique url for each cycle.
+.br
+See, the usage example in ./conf-examples/url-template-fr-file.conf
+
+.TP
+.B IGNORE_CONTENT_LENGTH
+Ignore the Content-Length header on a per url basis. This is useful for Apache 1.x 
+(and similar servers) which will report incorrect content length for files over 
+2 gigabytes. If this option is used, curl will not be able to accurately report 
+progress, and will simply stop the download when the server ends the connection. 
+.br
+E.g. Add the following in the URL Section:
+.br
+IGNORE_CONTENT_LENGTH=1
+
+.TP
+.B URL Randomization for caching servers
+Most caching server perform very well if the load generator is using a fixed
+set of URLs, since most of the objects will be served from cache. But in the real
+world there are millions of different URLs from which objects are served, so 
+to really stress test a caching server the load generator needs to use a large
+set of URLs, which is not very feasible in most cases.
+.br
+
+The other option is to create random URLs in the load-generator that refer to same 
+object on the webserver. So the caching server sitting in-between sees a large number 
+of unique URLs, thereby really exercising the system.
+.br
+
+The 2 options below provides the ability to add a random string in the URL. 
+They are specified per URL in the URL Section.
+.br
+
+URL=http://172.16.55.210/JUNKSTR/websites/testube/video/cNvJy0zoXOY.34
+.br
+.B URL_RANDOM_RANGE=0-2000
+.br
+.B URL_RANDOM_TOKEN=JUNKSTR
+.br
+E.g.
+http://172.16.55.210/276/websites/testube/video/cNvJy0zoXOY.34
+
+This will replace the string specified in URL_RANDOM_TOKEN with a random number 
+between 0-2000. You need to make sure that the token is part of the URL under test.
+.br
+
+To maps the unique URLs back to a single object on the webserver, you will need a 
+rewrite rule to ignore that random token.
+.br
+
+E.g. with lighttpd
+     enable mod_rewrite in server modules section
+.br
+     url.rewrite                = ( "^/[^/]*(.*)$"             => "$1" )
+.br
+
+     This will remove the first segment of the URL (/JUNKSTR/websites/testube/video/cNvJy0zoXOY.34) 
+     upto '/', thereby pointing to the same object on the webserver.
+
+For examples look at ./conf-examples/url-randomize.conf
+
+
+.SH AUTHORS
+The
+.B curl\-loader
+.nh
+program was written by Robert Iakobashvili and Michael Moser.
+.br
+
+This manual page was written by John Gatewood Ham
+.br
+.SH FILES
+/usr/bin/curl-loader
+.br
+/usr/share/doc/curl-loader/* for documentation
+.br
+/usr/share/doc/curl-loader/conf-examples/* for configuration examples
+.br
+.SH "SEE ALSO"
+.BR curl\-loader (8)

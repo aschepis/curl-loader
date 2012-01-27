@@ -1,0 +1,17 @@
+
+tst/err_label.v(3): error Target of goto must be a label, here it is a function declaration
+      3 |goto hello
+        |^^^^^^^^^^
+
+tst/err_label.v(29): error trying to go to a label that is not defined within the current scope
+     29 |  goto undefinedlabel2
+        |..^^^^^^^^^^^^^^^^^^^^
+
+tst/err_label.v(32): error trying to go to a label that is not defined within the current scope
+     32 |  goto undefinedlabel
+        |..^^^^^^^^^^^^^^^^^^^
+
+tst/err_label.v(35): error Target of goto must within the same scope as goto statement
+     35 |  goto ddd
+        |..^^^^^^^^
+*** ERROR semantics or code generation ***

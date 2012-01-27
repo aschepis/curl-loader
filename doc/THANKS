@@ -1,0 +1,26 @@
+The people, who have influenced curl-loader, by providing
+ideas, suggestions, support, bug fixes, patches, bug reports, etc:
+
+Gil Shai, <shaigil@gmail.com>
+Maxim Kovalenko, <maxkovalenko@gmail.com>
+Arik Nahmany, <Arik.Nahmany@vocaltec.com>
+Evgeniy Polyakov, <johnpol@2ka.mipt.ru>
+Jeremy Brown, <jbrown@novell.com>
+Alexandre Bezroutchko, <abb@scanit.be>
+Aleksandar Lazic <al-curlloader@none.at>
+Jeremy Hicks <jehicks@novell.com>
+John Gatewood Ham <buraphalinuxserver@gmail.com> - contributed man pages
+Artur Barashev <artvbar@gmail.com>
+Gregor Riepl <seto-kun@freesurf.ch>
+Iliyan Peychev <iliyan.peychev@gmail.com>
+Francois Pesce <francois.pesce@gmail.com>
+Sergei Shnaidman <sergei.shnaidman@qik.com>
+Alex <alex2048@gmail.com>
+Gary Fitts <gary@intouchgroup.com> - major contribution of URL-template and others
+Frank_Migge <Frank_Migge@manulife.com>
+jari pietila <jari2004@hotmail.com>
+Val Shkolnikov <val@nvsoft.net> - major contribution of operational statistics and fixed rate load
+Pranav Desai <pranavadesai@gmail.com> - added URL-randomization
+Shao, Shuchao (Simon) sshao@websense.com
+Wei Guo, weiguo85@gmail.com
+Eric Mueller, emueller@arbor.net

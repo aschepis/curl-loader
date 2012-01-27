@@ -1,0 +1,83 @@
+FAST START INSTRUCTIONS
+
+Building curl-loader.
+
+Build it using general C development environment with bash, 
+gcc (3 or 4 series), make, etc on a linux machine.
+        
+Building pre-requirements are:
+1. openssl binaries;
+2. openssl development package with include files (on debian package libssl-dev);
+         
+Adjust Makefile variables to point to the openssl headers and libraries. 
+If you want to specify an openssl development directory with include 
+files (e.g. crypto.h), export environment variable OPENSSLDIR with 
+the value of that directory.
+For example: $export OPENSSLDIR=the-full-path-to-the-directory
+
+We are building libcurl with --without-libidn option. Users, that would like 
+to resolve IDNA domain names with "international" letters can edit our 
+Makefile and use instead --with-libidn=full-path-dir. 
+
+Another known issue is libidn.so, which means, that some linux distributions 
+do have some libidn.so.11, but not libidn.so. Resolve it by creating a softlink 
+or in some cases exclude -lidn from the linking string, which requires 
+commenting a string in Makefile and uncommenting another.  
+        
+Run the following commands from your bash linux shell:
+$tar zxfv curl-loader-<version>.tar.gz
+$cd curl-loader-<version>
+$make
+         
+By default, we are building both libcurl and curl-loader without optimization and with
+debugging -g option. To build with optimization and without debugging, please, run:
+$make cleanall
+$make optimize=1 debug=0
+Optionally, run as a root:
+#make install
+If still any building issues, please, fill you free to contact us for assistance.
+
+       
+
+
+Loading Configuration.
+
+To run the load, you need to create your configuration file to be passed to
+curl-loader by the -f commmand line option, e.g.
+#curl-loader -f ./conf-user/bulk.conf
+        
+For more examples, please, look at the files in "conf-examples" directory. You may 
+copy an example file and edit it.
+        
+      
+
+Environment and System.
+
+Running hundreds and thousands of clients, please, do not forget:
+- to increase limit of descriptors (sockets) by running e.g. 
+   #ulimit -n 10000;
+- optionally, to set reuse of sockets in time-wait state: by setting 
+   #echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle and/or 
+   #echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse;
+       
+In some cases you may need to increase the system limits for open
+descriptors (sockets).
+       
+With curl-loader using libcurl, it honors the way libcurl handles proxy settings
+through .curlrc and by expanding the proxy environment variables $http_proxy,
+$ftp_proxy and $all_proxy. By using the curl-loader option -x, curl-loader can be
+forced to set or unset a proxy independend of .curlrc and environment, making the
+proxy usage more transparent.
+
+Usage: 
+
+run as a root user:
+#./curl-loader -f <configuration filename> [other options]
+For the details about [other options] - see FAQs in README.
+        
+If curl-loader reports any problems with validation of your configuration,
+"don't panic" - just fix it.
+
+
+For more details, please, look into the FAQs in README file.
+       

@@ -1,0 +1,32 @@
+diff -Nru curl-7.16.0/lib/multi.c curl-7.16.0-rob/lib/multi.c
+--- curl-7.16.0/lib/multi.c	2006-10-23 22:34:56.000000000 +0200
++++ curl-7.16.0-rob/lib/multi.c	2006-11-28 11:45:24.000000000 +0200
+@@ -8,7 +8,7 @@
+  * Copyright (C) 1998 - 2006, Daniel Stenberg, <daniel@haxx.se>, et al.
+  *
+  * This software is licensed as described in the file COPYING, which
+- * you should have received as part of this distribution. The terms
++ * you should have received as part of this distributionCu. The terms
+  * are also available at http://curl.haxx.se/docs/copyright.html.
+  *
+  * You may opt to use, copy, modify, merge, publish, distribute and/or sell
+@@ -730,6 +730,19 @@
+     for(i=0; i< MAX_SOCKSPEREASYHANDLE; i++) {
+       curl_socket_t s = CURL_SOCKET_BAD;
+ 
++      if (sockbunch[i] < 0 /*|| sockbunch[i] > 65535*/)
++        {
++          break;
++        }
++        
++        //if (sockbunch[i] >= FD_SETSIZE)
++        //{
++        //  fprintf (stderr, "\n\n%s - error: fd (socket) %d more, than FD_SETSIZE (%d)\n", 
++        //           __func__, sockbunch[i], FD_SETSIZE);
++        //  fprintf (stderr, "Edit the Makefile and increase CURL_LOADER_FD_SETSIZE\n");
++        //  break;
++        //}
++
+       if(bitmap & GETSOCK_READSOCK(i)) {
+         FD_SET(sockbunch[i], read_fd_set);
+         s = sockbunch[i];

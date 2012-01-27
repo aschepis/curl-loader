@@ -1,0 +1,39 @@
+
+USAGE:
+    ipconfig [/? | /all | /renew [adapter] | /release [adapter] |
+              /flushdns | /displaydns | /registerdns |
+              /showclassid adapter |
+              /setclassid adapter [classid] ]
+
+where
+    adapter         Connection name 
+                   (wildcard characters * and ? allowed, see examples)
+
+    Options:
+       /?           Display this help message
+       /all         Display full configuration information.
+       /release     Release the IP address for the specified adapter.
+       /renew       Renew the IP address for the specified adapter.
+       /flushdns    Purges the DNS Resolver cache.
+       /registerdns Refreshes all DHCP leases and re-registers DNS names
+       /displaydns  Display the contents of the DNS Resolver Cache.
+       /showclassid Displays all the dhcp class IDs allowed for adapter.
+       /setclassid  Modifies the dhcp class id.  
+
+The default is to display only the IP address, subnet mask and
+default gateway for each adapter bound to TCP/IP.
+
+For Release and Renew, if no adapter name is specified, then the IP address
+leases for all adapters bound to TCP/IP will be released or renewed.
+
+For Setclassid, if no ClassId is specified, then the ClassId is removed.
+
+Examples:
+    > ipconfig                   ... Show information.
+    > ipconfig /all              ... Show detailed information
+    > ipconfig /renew            ... renew all adapters
+    > ipconfig /renew EL*        ... renew any connection that has its 
+                                     name starting with EL
+    > ipconfig /release *Con*    ... release all matching connections,
+                                     eg. "Local Area Connection 1" or
+                                         "Local Area Connection 2"

@@ -1,0 +1,111 @@
+/*
+*
+* 2007 Copyright (c) 
+* Michael Moser,  <moser.michael@gmail.com>                 
+* All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+Question
+    do we have one implementation of cache or several?
+    - difference either in
+	 memory allocation
+	    fixed sized
+	    slab - reset and free does not reset and free of the whole allocator
+		   instead only one size class is reset.
+	 caching strategy
+	 bounded cache
+
+
+
+    - do we handle element lifetime? maximum bound on lifetime?
+
+    - least frequently used - 
+	- add this as extraction callback (like we did with hash table?)
+	- add least recently used timestamp as API for release function?
+	Nonstarters:
+	- based on the time when the object was returned by cache? no way! 
+	- no way to add least recently timestamp to cached object as data.
+	
+    - least recently used:
+	implement as a heap sorted by least recently used?
+	    heap is tree structure or array?
+
+    - what is the timestamp?
+	second, miliseconds, microseconds? simple opaque 64 bit int?
+    	    - opaque typedef that can be any of this + structre (as long as functions for manipulation are there)
+	    
+	
+
+Interface
+    Called by user
+	- alloc object 
+        - free object to cache  
+    Called by cache	
+	- destroy object and free to cache.
+- this is an interface that is different from normal memory allocator.
+
+
+Two kinds of caches: 
+    - fixed size object cache
+    - slab cache.
+
+
+Implementation: fixed size allocator is similar to pool of objects?
+-------------------------------------------------------------------
+
+that is fixed size allocator can have a mode to work as a pool; all we
+need is a pooled object constructor and destructor callback.
+
+Now when a fixed size element is first allocated (for first time) we run
+the object constructor;
+
+when we delete the whole pool (or reuse it) destructor in invoked on every 
+initialized element.
+
+? do we have a function to limit the number of pooled objects that reside
+  in the free list ?
+
+------------------
+
+fixed allocator initialisation: the size of each element has to be increased
+by sizeof(void *) bytes: when the element enters the free list we have to
+put in on the list, so first void * bytes get overwritten:
+
+Two approaches:
+    - put the pointer past end of the object so that we won't conflict with custom user supplied alignment (allocate element size + sizeof(pointer))
+    - separate list (unrolled) for cached objects.
+    - freelist for destroyed objects.
+
+if we wan't ability to limit the number of *created* objects on stack (i.e. on
+freelist there can be either created or uninitialized object) then we
+have to add some bit indicating that object is either in created or free
+state (maybe since pointer is aligned to some bytes at least (???) then we can
+steal a bit from the pointer ?)
+
+- better solution: keep two freelists - one for free and initialized objects, the other for free and unitialized objects. 
+
+Implementation
+--------------
+do we add pooling as a derived class of the fixed memory allocator, or do
+we munch it in as a separate mode?
+
+PRO:
+ reuse: ?? also need pooling with slab allocator ?? 
+ maintainability? separation of concerns?
+
+CONS:
+ 

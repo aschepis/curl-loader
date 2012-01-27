@@ -1,0 +1,24 @@
+diff -Naru libevent-1.4.14b-stable/devpoll.c libevent-1.4.14b-stable-mod/devpoll.c
+--- libevent-1.4.14b-stable/devpoll.c	2010-06-20 16:06:04.000000000 +0300
++++ libevent-1.4.14b-stable-mod/devpoll.c	2011-02-27 19:06:54.000000000 +0200
+@@ -85,7 +85,7 @@
+ 	1 /* need reinit */
+ };
+ 
+-#define NEVENT	32000
++#define NEVENT (128*1024)
+ 
+ static int
+ devpoll_commit(struct devpollop *devpollop)
+diff -Naru libevent-1.4.14b-stable/epoll.c libevent-1.4.14b-stable-mod/epoll.c
+--- libevent-1.4.14b-stable/epoll.c	2010-06-20 16:06:04.000000000 +0300
++++ libevent-1.4.14b-stable-mod/epoll.c	2011-02-27 19:06:48.000000000 +0200
+@@ -104,7 +104,7 @@
+ 
+ #define INITIAL_NFILES 32
+ #define INITIAL_NEVENTS 32
+-#define MAX_NEVENTS 4096
++#define MAX_NEVENTS (128*1024)
+ 
+ static void *
+ epoll_init(struct event_base *base)

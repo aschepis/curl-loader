@@ -1,0 +1,30 @@
+
+
+whole logging hirarchy has to be defined in one header file.
+
+VLOG_DEFINE_ROOT_CATEGORY( MAIN )
+  VLOG_CHILD_CATEGORY( TASK1 )
+  VLOG_CHILD_CATEGORY( TASK1 )
+VLOG_END_CATEGORY
+
+  -> get_VLOG_MAIN()
+
+
+struct LOGCATEGORY  *get_LOG_CATEGORY_MAIN()
+{
+   set child cat - task1
+   set child cat - task2
+}
+
+
+VLOG_DEFINE_CATEGORY( TASK1, MAIN )
+VLOG_END_CATEGORY
+
+
+LOG( TASK1, "this is a test")
+  get_VLOGGER_TASK1
+
+
+
+
+

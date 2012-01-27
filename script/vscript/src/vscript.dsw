@@ -1,0 +1,167 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "memalloc"=..\..\vlib\memalloc\win32\memalloc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name util
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "pcre"="..\..\pcre\pcre-7.4\pcre.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "test"=..\..\vlib\test\win32\test.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name util
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name memalloc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vtestlib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wrapper
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "util"=..\..\vlib\util\win32\util.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "vscript"=.\vscript.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name memalloc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name util
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wrapper
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vscript_rtl"=..\rtl\win32\vscript_rtl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name vscript
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vscripttest"=..\test\vscriptest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name memalloc
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name util
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vscript
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name vscript_rtl
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wrapper
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "vtestlib"=..\..\vtest\win32\vtestlib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "wrapper"=..\..\vlib\wrapper\win32\wrapper.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

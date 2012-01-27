@@ -1,0 +1,31 @@
+/*
+*
+* 2007 Copyright (c) 
+* Michael Moser,  <moser.michael@gmail.com>                 
+* All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+
+- allocate a big block when the allocator is initialsed?
+    decided against it.
+    allocate as you go - in any case it will be quite early in system
+    startup, so no surprises here (if you wan't do be double sure then
+    allocate something yourself)
+
+
+- big blocks of the same size, or do we some sort of resize policy?
+    i think fixed size for now; (???)

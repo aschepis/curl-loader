@@ -1,0 +1,10 @@
+*** syntax ok ***
+*** semantics and code generation ok ***
+
+>15
+
+>proc foo
+
+>1
+
+>15

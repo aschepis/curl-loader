@@ -1,0 +1,104 @@
+Last updated: June 13, 2010
+
+
+The strategic directions of development are:
+
+- increasing of loading power by delivering the load of hundred thousands 
+  (200 000 - 500 000) simulated HTTP/FTP users/clients;
+
+- adding support for deep inspection and analyses of HTTP/FTP 
+  response bodies and headers. Support for regular expressions and 
+  configurable actions; That was partially addressed for some cases
+
+- web-crawling and emulation of browser behaviour;
+
+- adding support for TLS/SSL HW acceleration (e.g. Cavium or Broadcom cards)
+  to deliver high numbers of HTTPS and FTPS load;
+
+
+
+
+---------------------------------------------------------------------------------------------------- 
+
+Next releases:
+
+0. Performance improvements:
+
+   -cached memory allocators, using libcurl API 
+   (Aleksandar Lazic <al-curlloader@none.at>):
+   http://curl.haxx.se/libcurl/c/curl_global_init_mem.html
+   Michael Moser has proposed to use the memory allocator like here:
+   http://www.hoard.org/
+   http://www.cs.umass.edu/%7Eemery/hoard/asplos2000.pdf
+
+- thread affinity for curl-loader SMP/multi- core HW adaptation feature.
+- Testbed for 50K and 100K clients. We need a more powerful HW:
+    2-4 CPUs/cores and 4-8 GB of memory.
+
+1. Multipart post forms (RFC1867) can be enhanced by adding loading tokens
+    from file, generation of unique words, etc 
+
+2. FETCH_REPETITION tag to define how much times to repeat a url fetching.
+
+2. Logging to files of responses headers and bodies can be improved. We may 
+    wish to use memory-mapped files.
+
+3. Configuration/making improvements: moving all source-files
+   to src directory etc.
+
+4. X.509 client certificates per each https, ftps url. Client certificate
+   for each client?
+
+5. Support for CAPS (calls per second) defined mode. Currently, we are 
+   supporting only a certain number of virtual clients and CAPS is the derived
+   parameter. CAPS-MODE MAY support a certain number of CAPS, 
+   and virtual clients number to be the derived parameter;
+
+6. Load Status GUI. Decrease of loading clients number [-|\] - SIPP-like;
+
+7. Template-guided output of configurable statistics 
+   (what user wishes with desired string, names) to statistics file;
+
+8. Support for more protocols: telnet, SFTP, SCP, SSH, etc;
+
+9. Support for more HTTP and FTP features.
+
+10. Support for browsers bevavior simulation.
+
+   Aleksandar Lazic <al-curlloader@none.at> has proposed to mimic
+   the behavior of browsers/wget, etc by:
+
+  "set max_connections_per_site <NUM>
+   set deep_or_breadth          (DEEP|BREADTH)
+   set deep_or_breadth_count    <NUM>
+   set wait_human_read_time     <NUM>
+
+   repeat as long as deep_or_breadth_count is not reached {
+
+   get site (e.g.: index.html)
+   parse site and ( count links and get the needed elements from remote
+                server
+             || if element is to get make new connection but not more
+                the max_connections_per_site
+              )
+
+   wait_human_read_time()
+
+   if breadth && deep_or_breadth_count not reached {
+      get the next link from same directory-level (e.g.: /, /news/, ...)
+    } elsif deep && deep_or_breadth_count not reached {
+       get the next link from the next directory-level
+    }
+   }"
+
+   Daniel Stenberg <daniel@haxx.se> has mentioned:
+
+   "The http spec recommends using no more than two connections to a single
+   server, and I believe they intened the primary connection to be used to get
+   the main html, and then you do a second connection (with pipelining) to get
+   all the images etc that the main HTML refers to.
+
+   For libcurl, you would add an easy handle for each connection you want to
+   make. libcurl's pipelining support doesn't currently allow you to do any fine-
+   grained control on what gets pipelined or not, so if you enable it you'll get
+   pipelining for every subsequent request sent to the same server."

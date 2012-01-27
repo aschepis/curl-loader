@@ -1,0 +1,631 @@
+/*
+*
+* 2007 Copyright (c) 
+* Michael Moser,  <moser.michael@gmail.com>                 
+* All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+?? do we want void functions - function without return values ??
+
+? assignment - expression may produce result right into assignment target
+		- in this case there is no cpy instruction for lhs = rhs.
+		    is this form of optimization? do people do this optimization during code generation?
+
+? functions have to
+    - reserve stack slot for ret val !- before evaluating argument expressions -!
+    - call of global functions - have to put results as stack results
+    - 
+
+TODO:
+    vm: fix assignment !!!
+	    - don't want to do mov of last instruction from
+	      temp to destination location...
+	    - (copy of scalars, addref all else)
+   
+    ---
+    expression - reference constant value
+    in
+	condition
+	    - pass location of expression as argument to operator.
+	assignment
+	    - create copy of constant	
+	    - put location into assignment target ASM_CPY 
+	function call
+	   !!! but rvalue has to be on stack !!!! 
+	    - create copy of constant
+	    - put onto stack location ASM_MOV
+	param of other expression.
+	    - pass location of expression as argument to operator.
+
+    expression - reference variable
+	condition
+	    - pass location as is.
+	assignment
+	    - pass location as is.	    
+	    - ASM_CPY
+	function call
+	   !!! but rvalue has to be on stack !!!! 
+	    - create copy of var
+	    - ASM_MOV of var
+
+    ??? ASM_MOV ASM_CPY - BUT WHAT ABOUT HASH/ARRAY?
+
+   
+
+    expression - function call
+    in 
+	condition
+	    - pass location of return value as argument to operator.	
+	assignment
+	    - ASM_MOV return value into assignment target
+	function call
+	    !!! but rvalue has to be on stack !!!!
+	    - do nothing; leave value where it is.
+		(had to alocate location on stack for return value though)
+	parm of other expression
+	    - pass location of return value as argument to operator.  
+	    
+    expression - result of expression 
+    in 
+	condition
+	    - location of expression as argument to operator.  
+	assignment
+	    - ASM_MOV expression result vlaue into assignment target.
+	function call
+	   !!! but rvalue has to be on stack !!!! 
+	    - do nothing; leave value where it is.
+	parm of other expression
+	    - pass location of return value as argument to operator.
+    --- 
+    
+    vm: function call from global scope:
+	last var is the smallest one (and arguments are in reversed order)
+	    - stack grows in different direction.
+	OR
+	    - evaluate parameters in reverse order in code generation
+		(order of merging the code)
+
+    gen: access to constants: - constant is always copied into
+	 global/local var;
+	 this should not -always- be done.
+
+    vm: access undefined var -> define it as SCALAR
+	(in appropriate context -> int/float/string)
+
+   
+        
+    gen: constants will be copied! (since code can assign to it as lhs)
+
+    sub foo(x)
+      x = b; // virtual machine error if we don't create var for 123.
+    end
+
+    foo(123)
+
+    gen: return at end of global scope.
+
+    OR: vm ignores assignment of constant values instead of issuing an error.
+
+
+
+
+---------------------------------
+
+  when to copy, when to addref;
+
+  passing parameters - addref (call by reference)
+  
+  var a,b
+
+  b = "a"
+  a = b // copy 
+  a = "aa" // two different values.
+
+
+
+  var %a,%b
+
+  a = b;  // copy
+
+  
+  asm instruction:
+  can be made smaller - need only one PARAM struct, other arguments are all ushort.
+
+  debug info:
+  stack trace, debug
+  ? given an location, (say stack slot), how do i get the name of 
+    variable that defines it ?
+    - variable definition is easy: lookup function prototype from PC of function      (!!! currently we don't store it in frame definition !!!)  
+      - but when i want to print local variable values, then i am screwed.
+	  - have to walk content of function and find VARDEF nodes.
+  
+  problems: 
+    - function call: extension function can get either constant or value.
+    - 
+  
+  stack access is always relative to the current frame.
+  we don't do that right now.\
+
+
+ // syntax currently does not allow for this at all !!!
+
+ //how do we express the following.
+  undef a[ 0 ];
+    
+    ;current state is an error; probably; this has to be one def.
+    mov tmp, a[0]
+    undef tmp
+    
+
+   undef a{ "aaa" };
+
+  SYNTAX
+  why do we have a{ "aaa" } for hashes 
+  and a[ 0 ] for arrays.
+  wouldn't it be simpler to do a[ "aa" ] for hashes too ????
+
+
+  TODO
+    - warning level 4 in every module
+    - vscript_ctx global only in lexer/parser.
+    - project: main - exe , vscript - dll.
+    - test xmethods?
+   
+   debug info
+	    in most cases this is some form of serialized AST with extended platform specific info (see dwarf spec)
+	    
+	    ? cheapest thing to do is serialize AST to disk
+	       problem: location info for variables, no such node in ast 
+
+	    ? strings - (name of id, etc, etc) keep it in special string table or keep it adjacent to serialized AST node. 
+	       
+   exe file format
+	    most formats are sectioned. 
+		[section heders table] 
+		[code section] 
+		[constant pool] 
+		[debug info] 
+		[line number table /map pc->line number/]
+	    problem: cross reference between sections makes things messy, but thats live;
+	    solution: make some index relative to its section start. (it is done in PE COFF format, right?).
+
+
+	    io: reading, vm reads it by mapping in memory mapped file;
+	    writing it is trickier - don't know size of file beforehand, so
+	    don't know how much file size to allocate; don't know if we
+	    can do growable memory mapped file in portable way, so write
+	    them with fwrite.
+
+    function calls
+	-  stack area uses window (don't want to push arguments, take result of 
+	   evaluating expressions)
+
+	   ISSUE: eval expression - if access of global, then we have to move it 
+	   to local on stack - BUT ONLY REQUIRED TO EVAL PARAMETERS !!!!
+
+	   ERGO - expression eval has to know if we are dealing with parameters of functions.
+
+	   layout on stack
+	    [0] - reserved for ret value
+	    [1] - param 1
+	    [2] - param 2
+	    [3] - param 3
+	    ------------------------------
+	    function activation record
+    	    	start-of-stack-when-called,
+		num-of-params
+
+	    on return
+		- move return value to location 0
+		- release stack vars. (-refcount)
+		  (undef local vars)
+	    
+
+    
+  Typing
+  ======
+
+    - variable has to be declared before use (similar to perl 'use strict' feature
+      this saves us the very common headache of misspelled variable names, that go by unnoticed.
+
+	    var @a, %b, c  // declares a as array, b as hash, c as scalar
+
+	    a = 1
+
+	    b[ 0 ] = 2
+
+	    c{ "aaa" } = 3
+	    
+	    e = 3	  // error, e has not been declared.
+
+    - new feature: undefine variables
+	
+	var a
+	sub foo()
+	    a = 1
+	end
+
+	undef a
+
+	a = 1
+
+	! CAN ONLY undef a variable in the scope that declared var. !
+	var a
+
+	sub foo()
+	    undef a // this must be caught as error. ok.
+	end
+
+	undef must be done as keyword, no way to do it as function, since it effects contents of symbol table
+
+	!!!PROBLEM: 
+	currently no way to undefine a location in array/hash
+	
+	var  @a
+	undef a[0]
+
+     strings and ints and floats are SCALAR values, and are treated interchangably depending on operator context
+	    var a, b, c
+
+	    a = 1
+	    b = 3.1415
+	    c = "aaa"
+
+	    print( a + b ) // ok: 4.1415
+
+	    print( a + c ) // ok: 1 + 0 , c has number value of 0 
+	    
+	    print( b + c ) // ok: "3.1415aaa"
+
+      hash and arrays (and lists?) are not scalars and cannot be mixed implicitly
+	    var @b,c
+	    
+	    // type check error, can't assign array to scalar
+	    c = b  
+
+      this rule is enforced in both compile time and runtime; problem
+      ELEMENTS OF ARRAYS AND HASHES CAN BE ANYTHING !!! THEREFORE CAN HAVE RUNTIME ERRORS.
+
+	    var @a, %b, c 	 
+
+	    // always ok, can't know what is in the bag.
+	    c = b[0]
+	    
+	    // always ok, can't know what is in the bag.	    
+	    c = b{"aaa"}
+ 
+	    // RULE:
+	    // if array element has not been assigned a value, and it is accessed, then it is a scalar of null value.	    
+ 
+ 
+     NOTE:
+	sub foo(x, @y)
+	end
+
+	foo( a[0], a[1] ) // type check is defered to runtime, but thats ok. no problem here
+
+   Assignment
+	    type of lhs must agree with rhs of expression
+
+   parameters
+	    all reference counted parameters are passed by reference (simple rule) ???
+
+   Scoping rules
+   =============
+
+    variable and function names cannot overlap.
+	var foo
+
+	sub foo() // error:
+	end
+
+    - function declared twice with the same arguments is an error
+
+	sub foo(x)
+	    var x // can't shaddow x
+	end
+
+    - function with different set of arguments is ok
+	sub foo(a,b)
+	end
+
+	sub foo(a,b,c) // ok different function
+	end
+
+    - function with same set of arguments but different return value is the same function?
+	sub % foo()
+	end
+	
+	sub @ foo()
+	end
+
+      PROBLEM:	
+	var @a = foo()  // we can get the type here
+	var %b = foo() 
+
+	a[0]   = foo()  // PROBLEM: array can hold any value. so what do we have here??
+			// so do we need explicit conversion for this case ???
+
+
+    - variable declared twice in the same scope is an error
+
+	var x
+
+	sub foo()
+	    var x // not an error, declare local
+
+	    var x // error
+	end
+
+	var x // error , redefines first line
+
+    - local variables can redefine/shaddow global variables.
+   	var x
+
+	sub foo()
+	    var x // not an error, declare local
+	end
+
+    - local variable cannot shaddow function parameter.
+   	sub foo(x)
+	    var x // error, already declared as function param
+	end 
+
+    - functions can have nested functions but only as lambdas (i.e. unnamed functions)
+	sub # foo()
+	
+	    return sub ()
+		return "";
+	    end
+	end
+
+	!!! CAN'T GENERATE CODE FOR THIS UNTIL WE HAVE AN OBJECT SYSTEM !!!!
+	!!! MUST IMPLEMENT CONTINUATIONS AS ANONYMOUS CLASSES !!!!
+	!!! THEREFORE FUNCTION REFERENCE MUST HOLD THIS POINTER IN OUR CASE !!!!        
+
+    - labels must be unique to the current scope (no var or function names of the same name)
+	foo:
+
+	sub foo() // error, we have label with the same name.
+	end
+      
+    - can't jump out of the current scope.	
+	sub foo()
+	    local:
+
+	    goto global //error
+	end
+
+	error:
+	    goto local // error
+    
+    
+    - can jump over variable delarations?????
+	var f
+
+	goto then
+
+	var g
+
+      then:	
+	
+	!!! IF WE DON'T DO THIS, THEN WE CAN'T HAVE THE FOLLOWING !!!
+	while 1
+	    var x // can't nest variable in while loop because of goto problem.
+	end
+
+    
+----
+TODO
+----
+
+SYNTAX-TODO
+
+- right now no way to declare array of arrays (or array of hashes)
+  also index index index a[b][c]{d} = 123
+
+- for loops
+	problem: epressions (b--) can be clauses here!
+
+	for( a=1 b=2 c=3 ;  c< 10 ; c++ b-- f--)
+
+  want function calls without parenthesis ?????
+    add one next lookahead symbol, somehow: 
+    
+
+
+ 
+----------------------------
+Neat language features to add
+-----------------------------
+
+
+    - syntax error reporting like in java (must)
+    - traces like in bash (set -x) (must)
+
+    - hash constructor
+    - array slices
+    - in build List? do we want this? any business case for doing so?
+
+
+    - foreach (in array)
+	problem: good only if you don't need index of iteration, any ideas?
+
+    - here documents
+    - quoted strings "aa ${vvv} aa" 
+	can be done by flex with state magic with state m
+    - runnable strings `...`
+
+    - for loops (what did we have in lisp?)
+
+    - object support
+	- all members public
+	- all functions virtual
+	- no operators
+	- no multiple inheritance
+	- no exceptions
+	- automatic destruction of stack objects like C++ kool, 
+	- reference based garbage
+	? interfaces in scripting ?
+    
+    - namespaces
+	see dynamic loading
+	
+    - packaging (jar files anybody?)
+
+    - dynamic loading of compiled files
+	this is the main feature of Java, feature is required if you
+	want efficient library support
+	Format of classfile: ? How to find the class files for a given class/method?
+	    java does it by requiring class file to be of same name as class.
+		(public classes and stuff + namespaces, yes we would have to implement them as well)
+	
+    - function is identified by
+	- function name and parameter types 	
+	- what if variadic function and defined function overlap ???
+ 	
+    - block as parametersa? don't need this if we have nonymous functions
+    - closures
+    - function refs
+    - variadic functions
+
+
+    - eval? how to do this with virtual machine ????
+    
+    - macros like Lisp? can't have this with YACC based parser.
+	Can be done as part of error processing (macro says that it extends expression, in error handler of expression
+	we try to match the macro thing)
+	That would make this lingo a cool one.
+
+    - metaprogramming 
+	dynamically adding methods to a class (nothanks virtual machine doesn ot like this) ?
+	No thanks; can't do this with virtual machine.
+
+    - templates
+	only limited form like in Java possible (well well)
+	    - aa<classB> only possible in variable declarations due to syntax constraints.
+
+----------------
+DESIGN DECISIONS
+----------------
+
+
+
+this section logs design decisions made so far.
+    
+    vm:
+    constants versus variables; i think we don't need that distinction.
+    (but then we have this unused refcount with constants. shit.)
+    - python constants have refcount - same PyObject are constants !
+    - Lua ; different entity for constant.
+    Well, we need a separate entity for string constants.!  
+
+    
+    xmethod, two ways of handling
+	compilation: map function name to AST_FUNCTION_DECL
+		     maintain extern function id.
+		     map function name to internal function id (for asm gen)
+	
+	runtime: map internal function id to (function action.
+    
+	logical to do this as an object that covers both aspects.
+	---------------------------------------------------------
+
+	- xmethods are added before compilation,
+	   -add AST for xmethod to temporary hash (also tests unique id)
+	    add AST declaration to global scope on start of compilation
+
+	   -create global symbol scope on init
+	    add AST as it is added by API, test for uniqueness of id
+		- either by walking linked list
+		- another hash.
+	    (preferable, somehow0. this whole special case for xmethods is a temporary solution anyway)
+	 
+	
+
+    asm id layoyt
+
+	address range
+	----------------------------------------------------
+	[stack===>]  ...verybiggap....  [globals][constants]
+
+	problem: don't know how many constants there are.
+	but we can make up a range with fixed constant that defines addresses for constants;
+	(say 100000, anyway in intermedeate code indexes are in ulong so that does not affect design of vm)
+	
+	address range
+	---------------------------------------------------------------
+	[stack===>]  ...verybiggap....  [globals] ...gap... [constants]
+
+
+	(paralel to stack we have function invocation 
+
+
+    temporary variable reuse.
+        - per current scope.
+	- make temporary variable (result of operator)
+	- mark as temporary
+	- when used then try to reuse it.
+
+	PROBLEM:
+	    - temporary variables for evaluation of expression
+	      in loop and if (i.e. control statement) is not cleaned
+	      until after the loop 
+	      (reason: first gen of expression), then gen statement then gen while)
+
+
+    code generation
+	available options
+
+	    - walk ast and generate code for each function/scope as we walk through
+		? access to global from function - results in forward declaration, since location is not known ?
+		? still have to forward decl function for function call ?
+
+	    
+	    - walk ast, first generate code for global scope
+	      then enter each function declaration and generate code for each function
+		- the best, always know storage location of variable.
+		  big problem if we have to backpatch storage location of variables - many many references.
+		  function call there is only one entity to deal with.
+
+
+    code generation basic
+	   separate stage
+		- type check
+		- code gen
+    
+	   ? that would give us the option of doing both eval() interpretation and byte code gen.
+	   problem is that you have to keep symbol table around between type check and code gen.
+
+	   another problem is that it needs more time to process
+	   decision: skip it.
+
+	   still may factor out type check as functions and call them in both cases if we do an eval interpreter.
+
+
+    abstract parsing tree? or hold ptr to subitem per AST node?
+	    pro: generalized iteration. services like generalized dumping/tracing of ast, iteration for code generation, etc.
+		  only way to do Lisp macros in the future; have generalized AST.
+	    cons: probably eats more memory. cause we always have those sibling links that you wouldn't need
+	          when you hold references to subitems per AST node ttype.
+
+
+    bison/flex or antlr
+	   ? antlr has some support for C code generation, but it does not seem to be a mainstream option.
+	     don't use it therefore.
+  
+	     

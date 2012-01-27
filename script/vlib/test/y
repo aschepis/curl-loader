@@ -1,0 +1,1124 @@
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x1d3): In function `VSRING_init':
+../../vlib/inc/util/vsring.h:43: multiple definition of `VSRING_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1d3):../../vlib/inc/util/vsring.h:43: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x1e0): In function `VSRING_isempty':
+../../vlib/inc/util/vsring.h:53: multiple definition of `VSRING_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1e0):../../vlib/inc/util/vsring.h:53: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x1f3): In function `VSRING_insert_after':
+../../vlib/inc/util/vsring.h:63: multiple definition of `VSRING_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1f3):../../vlib/inc/util/vsring.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x20a): In function `VSRING_unlink_after':
+../../vlib/inc/util/vsring.h:70: multiple definition of `VSRING_unlink_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x20a):../../vlib/inc/util/vsring.h:70: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x24a): In function `VSRING_push_front':
+../../vlib/inc/util/vsring.h:84: multiple definition of `VSRING_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x24a):../../vlib/inc/util/vsring.h:84: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x263): In function `VSRING_pop_front':
+../../vlib/inc/util/vsring.h:94: multiple definition of `VSRING_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x263):../../vlib/inc/util/vsring.h:94: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x2a5): In function `VSRING_get_first':
+../../vlib/inc/util/vsring.h:106: multiple definition of `VSRING_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x2a5):../../vlib/inc/util/vsring.h:106: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x2d3): In function `VSRING_get_last':
+../../vlib/inc/util/vsring.h:116: multiple definition of `VSRING_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x2d3):../../vlib/inc/util/vsring.h:116: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x31b): In function `VSRING_get_next':
+../../vlib/inc/util/vsring.h:129: multiple definition of `VSRING_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x31b):../../vlib/inc/util/vsring.h:129: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x341): In function `VSRING_size':
+../../vlib/inc/util/vsring.h:152: multiple definition of `VSRING_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x341):../../vlib/inc/util/vsring.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x36d): In function `VSRING_get_nth':
+../../vlib/inc/util/vsring.h:168: multiple definition of `VSRING_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x36d):../../vlib/inc/util/vsring.h:168: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x3b2): In function `VSRING_get_nth_reverse':
+../../vlib/inc/util/vsring.h:184: multiple definition of `VSRING_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3b2):../../vlib/inc/util/vsring.h:184: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x3da): In function `VSRING_foreach':
+../../vlib/inc/util/vsring.h:197: multiple definition of `VSRING_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3da):../../vlib/inc/util/vsring.h:197: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x417): In function `VSRING_findif':
+../../vlib/inc/util/vsring.h:220: multiple definition of `VSRING_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x417):../../vlib/inc/util/vsring.h:220: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x493): In function `VSRING_deleteif':
+../../vlib/inc/util/vsring.h:254: multiple definition of `VSRING_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x493):../../vlib/inc/util/vsring.h:254: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x52a): In function `VSRING_deleteall':
+../../vlib/inc/util/vsring.h:293: multiple definition of `VSRING_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x52a):../../vlib/inc/util/vsring.h:293: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x59c): In function `VSRING_insert_sorted':
+../../vlib/inc/util/vsring.h:321: multiple definition of `VSRING_insert_sorted'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x59c):../../vlib/inc/util/vsring.h:321: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x605): In function `VSRING_reverse':
+../../vlib/inc/util/vsring.h:344: multiple definition of `VSRING_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x605):../../vlib/inc/util/vsring.h:344: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x65b): In function `VSRING_check':
+../../vlib/inc/util/vsring.h:370: multiple definition of `VSRING_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x65b):../../vlib/inc/util/vsring.h:370: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x71b): In function `VBUCKETHASH_set_sizepolicy':
+../../vlib/inc/util/vbuckethash.h:168: multiple definition of `VBUCKETHASH_set_sizepolicy'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71b):../../vlib/inc/util/vbuckethash.h:168: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x73e): In function `VBUCKETHASH_free':
+../../vlib/inc/util/vbuckethash.h:191: multiple definition of `VBUCKETHASH_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x73e):../../vlib/inc/util/vbuckethash.h:191: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x77c): In function `VBUCKETHASH_size':
+../../vlib/inc/util/vbuckethash.h:206: multiple definition of `VBUCKETHASH_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x77c):../../vlib/inc/util/vbuckethash.h:206: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x787): In function `VBUCKETHASH_foreach_key':
+../../vlib/inc/util/vbuckethash.h:380: multiple definition of `VBUCKETHASH_foreach_key'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x787):../../vlib/inc/util/vbuckethash.h:380: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x7e0): In function `VBUCKETHASH_deletall_key':
+../../vlib/inc/util/vbuckethash.h:405: multiple definition of `VBUCKETHASH_deletall_key'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7e0):../../vlib/inc/util/vbuckethash.h:405: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x884): In function `VBUCKETHASH_foreach':
+../../vlib/inc/util/vbuckethash.h:427: multiple definition of `VBUCKETHASH_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x884):../../vlib/inc/util/vbuckethash.h:427: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x8fa): In function `VBUCKETHASH_findif':
+../../vlib/inc/util/vbuckethash.h:451: multiple definition of `VBUCKETHASH_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8fa):../../vlib/inc/util/vbuckethash.h:451: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0x99c): In function `VBUCKETHASH_deleteif':
+../../vlib/inc/util/vbuckethash.h:486: multiple definition of `VBUCKETHASH_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x99c):../../vlib/inc/util/vbuckethash.h:486: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0xa61): In function `VBUCKETHASH_deleteall':
+../../vlib/inc/util/vbuckethash.h:521: multiple definition of `VBUCKETHASH_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xa61):../../vlib/inc/util/vbuckethash.h:521: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuckethash.o(.text+0xb09): In function `VBUCKETHASH_check':
+../../vlib/inc/util/vbuckethash.h:538: multiple definition of `VBUCKETHASH_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb09):../../vlib/inc/util/vbuckethash.h:538: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x1d3): In function `VBUFFER_init_from_data':
+../../vlib/inc/util/vbuffer.h:57: multiple definition of `VBUFFER_init_from_data'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1200):../../vlib/inc/util/vbuffer.h:57: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x231): In function `VBUFFER_init':
+../../vlib/inc/util/vbuffer.h:85: multiple definition of `VBUFFER_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x125e):../../vlib/inc/util/vbuffer.h:85: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x2c9): In function `VBUFFER_free':
+../../vlib/inc/util/vbuffer.h:116: multiple definition of `VBUFFER_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12f6):../../vlib/inc/util/vbuffer.h:116: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x307): In function `VBUFFER_reset_at':
+../../vlib/inc/util/vbuffer.h:132: multiple definition of `VBUFFER_reset_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1334):../../vlib/inc/util/vbuffer.h:132: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x346): In function `VBUFFER_get_data_ptr':
+../../vlib/inc/util/vbuffer.h:147: multiple definition of `VBUFFER_get_data_ptr'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1373):../../vlib/inc/util/vbuffer.h:147: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x351): In function `VBUFFER_get_data_eof':
+../../vlib/inc/util/vbuffer.h:154: multiple definition of `VBUFFER_get_data_eof'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x137e):../../vlib/inc/util/vbuffer.h:154: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x362): In function `VBUFFER_get_data_size':
+../../vlib/inc/util/vbuffer.h:161: multiple definition of `VBUFFER_get_data_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x138f):../../vlib/inc/util/vbuffer.h:161: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x36d): In function `VBUFFER_buffer_size':
+../../vlib/inc/util/vbuffer.h:169: multiple definition of `VBUFFER_buffer_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x139a):../../vlib/inc/util/vbuffer.h:169: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x378): In function `VBUFFER_headroom':
+../../vlib/inc/util/vbuffer.h:176: multiple definition of `VBUFFER_headroom'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x13a5):../../vlib/inc/util/vbuffer.h:176: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x38b): In function `VBUFFER_tailroom':
+../../vlib/inc/util/vbuffer.h:184: multiple definition of `VBUFFER_tailroom'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x13b8):../../vlib/inc/util/vbuffer.h:184: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x3b5): In function `VBUFFER_set_headroom':
+../../vlib/inc/util/vbuffer.h:195: multiple definition of `VBUFFER_set_headroom'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x13e2):../../vlib/inc/util/vbuffer.h:195: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x441): In function `VBUFFER_resize':
+../../vlib/inc/util/vbuffer.h:217: multiple definition of `VBUFFER_resize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x146e):../../vlib/inc/util/vbuffer.h:217: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x4f3): In function `VBUFFER_data_set_size':
+../../vlib/inc/util/vbuffer.h:253: multiple definition of `VBUFFER_data_set_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1520):../../vlib/inc/util/vbuffer.h:253: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x567): In function `VBUFFER_add_data':
+../../vlib/inc/util/vbuffer.h:284: multiple definition of `VBUFFER_add_data'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1594):../../vlib/inc/util/vbuffer.h:284: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbuffer.o(.text+0x607): In function `VBUFFER_check':
+../../vlib/inc/util/vbuffer.h:313: multiple definition of `VBUFFER_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1634):../../vlib/inc/util/vbuffer.h:313: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vcircbuf.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vclosedhash.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdlist.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x1d3): In function `VDRING_init':
+../../vlib/inc/util/vdring.h:43: multiple definition of `VDRING_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbd6):../../vlib/inc/util/vdring.h:43: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x1e6): In function `VDRING_isempty':
+../../vlib/inc/util/vdring.h:54: multiple definition of `VDRING_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbe9):../../vlib/inc/util/vdring.h:54: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x1f9): In function `VDRING_insert_before':
+../../vlib/inc/util/vdring.h:64: multiple definition of `VDRING_insert_before'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbfc):../../vlib/inc/util/vdring.h:64: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x226): In function `VDRING_insert_after':
+../../vlib/inc/util/vdring.h:78: multiple definition of `VDRING_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc29):../../vlib/inc/util/vdring.h:78: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x241): In function `VDRING_unlink':
+../../vlib/inc/util/vdring.h:96: multiple definition of `VDRING_unlink'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc44):../../vlib/inc/util/vdring.h:96: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x264): In function `VDRING_push_back':
+../../vlib/inc/util/vdring.h:108: multiple definition of `VDRING_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc67):../../vlib/inc/util/vdring.h:108: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x280): In function `VDRING_push_front':
+../../vlib/inc/util/vdring.h:118: multiple definition of `VDRING_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc83):../../vlib/inc/util/vdring.h:118: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x299): In function `VDRING_pop_front':
+../../vlib/inc/util/vdring.h:128: multiple definition of `VDRING_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc9c):../../vlib/inc/util/vdring.h:128: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x2dd): In function `VDRING_pop_back':
+../../vlib/inc/util/vdring.h:145: multiple definition of `VDRING_pop_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xce0):../../vlib/inc/util/vdring.h:145: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x323): In function `VDRING_get_first':
+../../vlib/inc/util/vdring.h:158: multiple definition of `VDRING_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd26):../../vlib/inc/util/vdring.h:158: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x351): In function `VDRING_get_last':
+../../vlib/inc/util/vdring.h:166: multiple definition of `VDRING_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd54):../../vlib/inc/util/vdring.h:166: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x380): In function `VDRING_get_next':
+../../vlib/inc/util/vdring.h:175: multiple definition of `VDRING_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd83):../../vlib/inc/util/vdring.h:175: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x3a6): In function `VDRING_get_prev':
+../../vlib/inc/util/vdring.h:185: multiple definition of `VDRING_get_prev'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xda9):../../vlib/inc/util/vdring.h:185: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x3ce): In function `VDRING_size':
+../../vlib/inc/util/vdring.h:240: multiple definition of `VDRING_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd1):../../vlib/inc/util/vdring.h:240: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x3fa): In function `VDRING_get_nth':
+../../vlib/inc/util/vdring.h:256: multiple definition of `VDRING_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdfd):../../vlib/inc/util/vdring.h:256: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x43f): In function `VDRING_get_nth_reverse':
+../../vlib/inc/util/vdring.h:272: multiple definition of `VDRING_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe42):../../vlib/inc/util/vdring.h:272: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x467): In function `VDRING_findif':
+../../vlib/inc/util/vdring.h:305: multiple definition of `VDRING_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe6a):../../vlib/inc/util/vdring.h:305: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x549): In function `VDRING_find_reverse':
+../../vlib/inc/util/vdring.h:355: multiple definition of `VDRING_find_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xf4c):../../vlib/inc/util/vdring.h:355: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x630): In function `VDRING_deleteif':
+../../vlib/inc/util/vdring.h:404: multiple definition of `VDRING_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1033):../../vlib/inc/util/vdring.h:404: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x6bf): In function `VDRING_deleteall':
+../../vlib/inc/util/vdring.h:431: multiple definition of `VDRING_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x10c2):../../vlib/inc/util/vdring.h:431: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x739): In function `VDRING_reverse':
+../../vlib/inc/util/vdring.h:452: multiple definition of `VDRING_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x113c):../../vlib/inc/util/vdring.h:452: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vdring.o(.text+0x7ab): In function `VDRING_check':
+../../vlib/inc/util/vdring.h:482: multiple definition of `VDRING_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x11ae):../../vlib/inc/util/vdring.h:482: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vheap.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x3b7): In function `VARR_init':
+../../vlib/inc/util/varr.h:47: multiple definition of `VARR_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x1d3):../../vlib/inc/util/varr.h:47: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x451): In function `VARR_set_sizepolicy':
+../../vlib/inc/util/varr.h:86: multiple definition of `VARR_set_sizepolicy'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x26d):../../vlib/inc/util/varr.h:86: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x474): In function `VARR_init_fixed':
+../../vlib/inc/util/varr.h:103: multiple definition of `VARR_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x290):../../vlib/inc/util/varr.h:103: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x4df): In function `VARR_free':
+../../vlib/inc/util/varr.h:145: multiple definition of `VARR_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x2fb):../../vlib/inc/util/varr.h:145: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x51d): In function `VARR_reset':
+../../vlib/inc/util/varr.h:155: multiple definition of `VARR_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x339):../../vlib/inc/util/varr.h:155: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x52c): In function `VARR_size':
+../../vlib/inc/util/varr.h:165: multiple definition of `VARR_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x348):../../vlib/inc/util/varr.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x537): In function `VARR_maxsize':
+../../vlib/inc/util/varr.h:175: multiple definition of `VARR_maxsize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x353):../../vlib/inc/util/varr.h:175: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x542): In function `VARR_resize':
+../../vlib/inc/util/varr.h:187: multiple definition of `VARR_resize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x35e):../../vlib/inc/util/varr.h:187: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x5d9): In function `VARR_at':
+../../vlib/inc/util/varr.h:210: multiple definition of `VARR_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x3f5):../../vlib/inc/util/varr.h:210: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x60b): In function `VARR_copy_at':
+../../vlib/inc/util/varr.h:219: multiple definition of `VARR_copy_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x427):../../vlib/inc/util/varr.h:219: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x653): In function `VARR_delete_at':
+../../vlib/inc/util/varr.h:234: multiple definition of `VARR_delete_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x46f):../../vlib/inc/util/varr.h:234: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x6cd): In function `VARR_push_back':
+../../vlib/inc/util/varr.h:253: multiple definition of `VARR_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x4e9):../../vlib/inc/util/varr.h:253: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x6ec): In function `VARR_pop_back':
+../../vlib/inc/util/varr.h:259: multiple definition of `VARR_pop_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x508):../../vlib/inc/util/varr.h:259: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x752): In function `VARR_stack_top':
+../../vlib/inc/util/varr.h:275: multiple definition of `VARR_stack_top'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x56e):../../vlib/inc/util/varr.h:275: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x7b5): In function `VARR_foreach':
+../../vlib/inc/util/varr.h:316: multiple definition of `VARR_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x5d1):../../vlib/inc/util/varr.h:316: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x80c): In function `VARR_foreach_range':
+../../vlib/inc/util/varr.h:328: multiple definition of `VARR_foreach_range'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x628):../../vlib/inc/util/varr.h:328: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x894): In function `VARR_foreach_reverse':
+../../vlib/inc/util/varr.h:348: multiple definition of `VARR_foreach_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x6b0):../../vlib/inc/util/varr.h:348: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x8f1): In function `VARR_foreach_reverse_range':
+../../vlib/inc/util/varr.h:364: multiple definition of `VARR_foreach_reverse_range'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x70d):../../vlib/inc/util/varr.h:364: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x97a): In function `VARR_findif':
+../../vlib/inc/util/varr.h:386: multiple definition of `VARR_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x796):../../vlib/inc/util/varr.h:386: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xa09): In function `VARR_findif_range':
+../../vlib/inc/util/varr.h:410: multiple definition of `VARR_findif_range'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x825):../../vlib/inc/util/varr.h:410: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xabf): In function `VARR_findif_reverse':
+../../vlib/inc/util/varr.h:440: multiple definition of `VARR_findif_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x8db):../../vlib/inc/util/varr.h:440: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xb54): In function `VARR_findif_reverse_range':
+../../vlib/inc/util/varr.h:468: multiple definition of `VARR_findif_reverse_range'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./varr.o(.text+0x970):../../vlib/inc/util/varr.h:468: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc0b): In function `VDRING_init':
+../../vlib/inc/util/vdring.h:43: multiple definition of `VDRING_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbd6):../../vlib/inc/util/vdring.h:43: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc1e): In function `VDRING_isempty':
+../../vlib/inc/util/vdring.h:54: multiple definition of `VDRING_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbe9):../../vlib/inc/util/vdring.h:54: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc31): In function `VDRING_insert_before':
+../../vlib/inc/util/vdring.h:64: multiple definition of `VDRING_insert_before'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbfc):../../vlib/inc/util/vdring.h:64: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc5e): In function `VDRING_insert_after':
+../../vlib/inc/util/vdring.h:78: multiple definition of `VDRING_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc29):../../vlib/inc/util/vdring.h:78: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc79): In function `VDRING_unlink':
+../../vlib/inc/util/vdring.h:96: multiple definition of `VDRING_unlink'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc44):../../vlib/inc/util/vdring.h:96: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xc9c): In function `VDRING_push_back':
+../../vlib/inc/util/vdring.h:108: multiple definition of `VDRING_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc67):../../vlib/inc/util/vdring.h:108: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xcb8): In function `VDRING_push_front':
+../../vlib/inc/util/vdring.h:118: multiple definition of `VDRING_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc83):../../vlib/inc/util/vdring.h:118: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xcd1): In function `VDRING_pop_front':
+../../vlib/inc/util/vdring.h:128: multiple definition of `VDRING_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc9c):../../vlib/inc/util/vdring.h:128: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xd15): In function `VDRING_pop_back':
+../../vlib/inc/util/vdring.h:145: multiple definition of `VDRING_pop_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xce0):../../vlib/inc/util/vdring.h:145: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xd5b): In function `VDRING_get_first':
+../../vlib/inc/util/vdring.h:158: multiple definition of `VDRING_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd26):../../vlib/inc/util/vdring.h:158: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xd89): In function `VDRING_get_last':
+../../vlib/inc/util/vdring.h:166: multiple definition of `VDRING_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd54):../../vlib/inc/util/vdring.h:166: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xdb8): In function `VDRING_get_next':
+../../vlib/inc/util/vdring.h:175: multiple definition of `VDRING_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd83):../../vlib/inc/util/vdring.h:175: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xdde): In function `VDRING_get_prev':
+../../vlib/inc/util/vdring.h:185: multiple definition of `VDRING_get_prev'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xda9):../../vlib/inc/util/vdring.h:185: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xe06): In function `VDRING_size':
+../../vlib/inc/util/vdring.h:240: multiple definition of `VDRING_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd1):../../vlib/inc/util/vdring.h:240: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xe32): In function `VDRING_get_nth':
+../../vlib/inc/util/vdring.h:256: multiple definition of `VDRING_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdfd):../../vlib/inc/util/vdring.h:256: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xe77): In function `VDRING_get_nth_reverse':
+../../vlib/inc/util/vdring.h:272: multiple definition of `VDRING_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe42):../../vlib/inc/util/vdring.h:272: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xe9f): In function `VDRING_findif':
+../../vlib/inc/util/vdring.h:305: multiple definition of `VDRING_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe6a):../../vlib/inc/util/vdring.h:305: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0xf81): In function `VDRING_find_reverse':
+../../vlib/inc/util/vdring.h:355: multiple definition of `VDRING_find_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xf4c):../../vlib/inc/util/vdring.h:355: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1068): In function `VDRING_deleteif':
+../../vlib/inc/util/vdring.h:404: multiple definition of `VDRING_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1033):../../vlib/inc/util/vdring.h:404: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x10f7): In function `VDRING_deleteall':
+../../vlib/inc/util/vdring.h:431: multiple definition of `VDRING_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x10c2):../../vlib/inc/util/vdring.h:431: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1171): In function `VDRING_reverse':
+../../vlib/inc/util/vdring.h:452: multiple definition of `VDRING_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x113c):../../vlib/inc/util/vdring.h:452: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x11e3): In function `VDRING_check':
+../../vlib/inc/util/vdring.h:482: multiple definition of `VDRING_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x11ae):../../vlib/inc/util/vdring.h:482: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x1d3): In function `VSLIST_init':
+../../vlib/inc/util/vslist.h:54: multiple definition of `VSLIST_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x186b):../../vlib/inc/util/vslist.h:54: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x1f5): In function `VSLIST_isempty':
+../../vlib/inc/util/vslist.h:67: multiple definition of `VSLIST_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x188d):../../vlib/inc/util/vslist.h:67: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x207): In function `VSLIST_insert_after':
+../../vlib/inc/util/vslist.h:79: multiple definition of `VSLIST_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x189f):../../vlib/inc/util/vslist.h:79: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x273): In function `VSLIST_unlink_after':
+../../vlib/inc/util/vslist.h:116: multiple definition of `VSLIST_unlink_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x190b):../../vlib/inc/util/vslist.h:116: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x305): In function `VSLIST_push_back':
+../../vlib/inc/util/vslist.h:153: multiple definition of `VSLIST_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x199d):../../vlib/inc/util/vslist.h:153: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x324): In function `VSLIST_push_front':
+../../vlib/inc/util/vslist.h:163: multiple definition of `VSLIST_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x19bc):../../vlib/inc/util/vslist.h:163: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x33f): In function `VSLIST_append':
+../../vlib/inc/util/vslist.h:174: multiple definition of `VSLIST_append'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x19d7):../../vlib/inc/util/vslist.h:174: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x3ca): In function `VSLIST_pop_front':
+../../vlib/inc/util/vslist.h:211: multiple definition of `VSLIST_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1a62):../../vlib/inc/util/vslist.h:211: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x3e2): In function `VSLIST_get_first':
+../../vlib/inc/util/vslist.h:217: multiple definition of `VSLIST_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1a7a):../../vlib/inc/util/vslist.h:217: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x3ed): In function `VSLIST_get_last':
+../../vlib/inc/util/vslist.h:222: multiple definition of `VSLIST_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1a85):../../vlib/inc/util/vslist.h:222: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x3f8): In function `VSLIST_get_next':
+../../vlib/inc/util/vslist.h:228: multiple definition of `VSLIST_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1a90):../../vlib/inc/util/vslist.h:228: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x402): In function `VSLIST_size':
+../../vlib/inc/util/vslist.h:261: multiple definition of `VSLIST_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1a9a):../../vlib/inc/util/vslist.h:261: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x40c): In function `VSLIST_get_nth':
+../../vlib/inc/util/vslist.h:281: multiple definition of `VSLIST_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1aa4):../../vlib/inc/util/vslist.h:281: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x461): In function `VSLIST_get_nth_reverse':
+../../vlib/inc/util/vslist.h:304: multiple definition of `VSLIST_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1af9):../../vlib/inc/util/vslist.h:304: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x489): In function `VSLIST_foreach':
+../../vlib/inc/util/vslist.h:317: multiple definition of `VSLIST_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1b21):../../vlib/inc/util/vslist.h:317: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x4c8): In function `VSLIST_findif':
+../../vlib/inc/util/vslist.h:340: multiple definition of `VSLIST_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1b60):../../vlib/inc/util/vslist.h:340: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x546): In function `VSLIST_insert_sorted':
+../../vlib/inc/util/vslist.h:376: multiple definition of `VSLIST_insert_sorted'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1bde):../../vlib/inc/util/vslist.h:376: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x5b2): In function `VSLIST_deleteif':
+../../vlib/inc/util/vslist.h:401: multiple definition of `VSLIST_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1c4a):../../vlib/inc/util/vslist.h:401: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x640): In function `VSLIST_deleteall':
+../../vlib/inc/util/vslist.h:436: multiple definition of `VSLIST_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1cd8):../../vlib/inc/util/vslist.h:436: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x6b0): In function `VSLIST_reverse':
+../../vlib/inc/util/vslist.h:462: multiple definition of `VSLIST_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1d48):../../vlib/inc/util/vslist.h:462: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vslist.o(.text+0x71c): In function `VSLIST_check':
+../../vlib/inc/util/vslist.h:490: multiple definition of `VSLIST_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1db4):../../vlib/inc/util/vslist.h:490: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x1d3): In function `VBITS_setbit':
+../../vlib/inc/util/vbitvector.h:18: multiple definition of `VBITS_setbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x1d3):../../vlib/inc/util/vbitvector.h:18: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x20b): In function `VBITS_clearbit':
+../../vlib/inc/util/vbitvector.h:28: multiple definition of `VBITS_clearbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x20b):../../vlib/inc/util/vbitvector.h:28: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x245): In function `VBITS_testbit':
+../../vlib/inc/util/vbitvector.h:38: multiple definition of `VBITS_testbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x245):../../vlib/inc/util/vbitvector.h:38: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x26c): In function `VBITVECTOR_getsize':
+../../vlib/inc/util/vbitvector.h:62: multiple definition of `VBITVECTOR_getsize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x26c):../../vlib/inc/util/vbitvector.h:62: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x287): In function `VBITVECTOR_init':
+../../vlib/inc/util/vbitvector.h:82: multiple definition of `VBITVECTOR_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x287):../../vlib/inc/util/vbitvector.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x326): In function `VBITVCECTOR_init_from_mem':
+../../vlib/inc/util/vbitvector.h:105: multiple definition of `VBITVCECTOR_init_from_mem'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x326):../../vlib/inc/util/vbitvector.h:105: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x391): In function `VBITVECTOR_resize':
+../../vlib/inc/util/vbitvector.h:128: multiple definition of `VBITVECTOR_resize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x391):../../vlib/inc/util/vbitvector.h:128: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x441): In function `VBITVECTOR_free':
+../../vlib/inc/util/vbitvector.h:159: multiple definition of `VBITVECTOR_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x441):../../vlib/inc/util/vbitvector.h:159: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x47f): In function `VBITVECTOR_setbit':
+../../vlib/inc/util/vbitvector.h:176: multiple definition of `VBITVECTOR_setbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x47f):../../vlib/inc/util/vbitvector.h:176: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x4b9): In function `VBITVECTOR_clearbit':
+../../vlib/inc/util/vbitvector.h:194: multiple definition of `VBITVECTOR_clearbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x4b9):../../vlib/inc/util/vbitvector.h:194: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x4f3): In function `VBITVECTOR_testbit':
+../../vlib/inc/util/vbitvector.h:211: multiple definition of `VBITVECTOR_testbit'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x4f3):../../vlib/inc/util/vbitvector.h:211: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x529): In function `VBITVECTOR_get_word':
+../../vlib/inc/util/vbitvector.h:222: multiple definition of `VBITVECTOR_get_word'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x529):../../vlib/inc/util/vbitvector.h:222: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x559): In function `VBITVECTOR_set_word':
+../../vlib/inc/util/vbitvector.h:232: multiple definition of `VBITVECTOR_set_word'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x559):../../vlib/inc/util/vbitvector.h:232: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x584): In function `VBITVECTOR_foreach':
+../../vlib/inc/util/vbitvector.h:313: multiple definition of `VBITVECTOR_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x584):../../vlib/inc/util/vbitvector.h:313: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsparsearray.o(.text+0x696): In function `VBITVECTOR_findin':
+../../vlib/inc/util/vbitvector.h:339: multiple definition of `VBITVECTOR_findin'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vbitvector.o(.text+0x696):../../vlib/inc/util/vbitvector.h:339: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x1d3): In function `VSRING_init':
+../../vlib/inc/util/vsring.h:43: multiple definition of `VSRING_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1d3):../../vlib/inc/util/vsring.h:43: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x1e0): In function `VSRING_isempty':
+../../vlib/inc/util/vsring.h:53: multiple definition of `VSRING_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1e0):../../vlib/inc/util/vsring.h:53: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x1f3): In function `VSRING_insert_after':
+../../vlib/inc/util/vsring.h:63: multiple definition of `VSRING_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1f3):../../vlib/inc/util/vsring.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x20a): In function `VSRING_unlink_after':
+../../vlib/inc/util/vsring.h:70: multiple definition of `VSRING_unlink_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x20a):../../vlib/inc/util/vsring.h:70: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x24a): In function `VSRING_push_front':
+../../vlib/inc/util/vsring.h:84: multiple definition of `VSRING_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x24a):../../vlib/inc/util/vsring.h:84: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x263): In function `VSRING_pop_front':
+../../vlib/inc/util/vsring.h:94: multiple definition of `VSRING_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x263):../../vlib/inc/util/vsring.h:94: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x2a5): In function `VSRING_get_first':
+../../vlib/inc/util/vsring.h:106: multiple definition of `VSRING_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x2a5):../../vlib/inc/util/vsring.h:106: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x2d3): In function `VSRING_get_last':
+../../vlib/inc/util/vsring.h:116: multiple definition of `VSRING_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x2d3):../../vlib/inc/util/vsring.h:116: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x31b): In function `VSRING_get_next':
+../../vlib/inc/util/vsring.h:129: multiple definition of `VSRING_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x31b):../../vlib/inc/util/vsring.h:129: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x341): In function `VSRING_size':
+../../vlib/inc/util/vsring.h:152: multiple definition of `VSRING_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x341):../../vlib/inc/util/vsring.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x36d): In function `VSRING_get_nth':
+../../vlib/inc/util/vsring.h:168: multiple definition of `VSRING_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x36d):../../vlib/inc/util/vsring.h:168: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x3b2): In function `VSRING_get_nth_reverse':
+../../vlib/inc/util/vsring.h:184: multiple definition of `VSRING_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3b2):../../vlib/inc/util/vsring.h:184: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x3da): In function `VSRING_foreach':
+../../vlib/inc/util/vsring.h:197: multiple definition of `VSRING_foreach'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3da):../../vlib/inc/util/vsring.h:197: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x417): In function `VSRING_findif':
+../../vlib/inc/util/vsring.h:220: multiple definition of `VSRING_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x417):../../vlib/inc/util/vsring.h:220: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x493): In function `VSRING_deleteif':
+../../vlib/inc/util/vsring.h:254: multiple definition of `VSRING_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x493):../../vlib/inc/util/vsring.h:254: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x52a): In function `VSRING_deleteall':
+../../vlib/inc/util/vsring.h:293: multiple definition of `VSRING_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x52a):../../vlib/inc/util/vsring.h:293: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x59c): In function `VSRING_insert_sorted':
+../../vlib/inc/util/vsring.h:321: multiple definition of `VSRING_insert_sorted'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x59c):../../vlib/inc/util/vsring.h:321: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x605): In function `VSRING_reverse':
+../../vlib/inc/util/vsring.h:344: multiple definition of `VSRING_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x605):../../vlib/inc/util/vsring.h:344: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vsring.o(.text+0x65b): In function `VSRING_check':
+../../vlib/inc/util/vsring.h:370: multiple definition of `VSRING_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x65b):../../vlib/inc/util/vsring.h:370: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x1d3): In function `VSTRA_init':
+../../vlib/inc/util/vstra.h:65: multiple definition of `VSTRA_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x16d3):../../vlib/inc/util/vstra.h:65: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x1ee): In function `VSTRA_init_fixed':
+../../vlib/inc/util/vstra.h:70: multiple definition of `VSTRA_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x16ee):../../vlib/inc/util/vstra.h:70: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x270): In function `VSTRA_set_sizepolicy':
+../../vlib/inc/util/vstra.h:102: multiple definition of `VSTRA_set_sizepolicy'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1770):../../vlib/inc/util/vstra.h:102: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x293): In function `VSTRA_free':
+../../vlib/inc/util/vstra.h:127: multiple definition of `VSTRA_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1793):../../vlib/inc/util/vstra.h:127: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x2d1): In function `VSTRA_set_zero':
+../../vlib/inc/util/vstra.h:146: multiple definition of `VSTRA_set_zero'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x17d1):../../vlib/inc/util/vstra.h:146: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x2e9): In function `VSTRA_cstr':
+../../vlib/inc/util/vstra.h:196: multiple definition of `VSTRA_cstr'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x17e9):../../vlib/inc/util/vstra.h:196: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x2f4): In function `VSTRA_str':
+../../vlib/inc/util/vstra.h:201: multiple definition of `VSTRA_str'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x17f4):../../vlib/inc/util/vstra.h:201: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x2ff): In function `VSTRA_length':
+../../vlib/inc/util/vstra.h:208: multiple definition of `VSTRA_length'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x17ff):../../vlib/inc/util/vstra.h:208: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vstra.o(.text+0x30a): In function `VSTRA_maxsize':
+../../vlib/inc/util/vstra.h:213: multiple definition of `VSTRA_maxsize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x180a):../../vlib/inc/util/vstra.h:213: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vtree.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x0): In function `VCONTEXT_memstats':
+../../vlib/inc/util/vcontext.h:55: multiple definition of `VCONTEXT_memstats'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x0):../../vlib/inc/util/vcontext.h:55: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x3a): In function `VCONTEXT_reset':
+../../vlib/inc/util/vcontext.h:63: multiple definition of `VCONTEXT_reset'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x3a):../../vlib/inc/util/vcontext.h:63: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x71): In function `VCONTEXT_get_error_callback':
+../../vlib/inc/util/vcontext.h:74: multiple definition of `VCONTEXT_get_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x71):../../vlib/inc/util/vcontext.h:74: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x7c): In function `VCONTEXT_set_error_callback':
+../../vlib/inc/util/vcontext.h:82: multiple definition of `VCONTEXT_set_error_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x7c):../../vlib/inc/util/vcontext.h:82: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x8a): In function `VCONTEXT_MEM_STATS_clear':
+../../vlib/inc/util/vcontext.h:121: multiple definition of `VCONTEXT_MEM_STATS_clear'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x8a):../../vlib/inc/util/vcontext.h:121: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xb6): In function `VRESIZE_init_increment':
+../../vlib/inc/util/vbasedefs.h:139: multiple definition of `VRESIZE_init_increment'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xb6):../../vlib/inc/util/vbasedefs.h:139: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xdd): In function `VRESIZE_init_multiply':
+../../vlib/inc/util/vbasedefs.h:152: multiple definition of `VRESIZE_init_multiply'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd):../../vlib/inc/util/vbasedefs.h:152: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x104): In function `VRESIZE_init_callback':
+../../vlib/inc/util/vbasedefs.h:165: multiple definition of `VRESIZE_init_callback'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x104):../../vlib/inc/util/vbasedefs.h:165: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x12b): In function `VRESIZE_init_fixed':
+../../vlib/inc/util/vbasedefs.h:178: multiple definition of `VRESIZE_init_fixed'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x12b):../../vlib/inc/util/vbasedefs.h:178: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x14c): In function `VRESIZE_request':
+../../vlib/inc/util/vbasedefs.h:188: multiple definition of `VRESIZE_request'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x14c):../../vlib/inc/util/vbasedefs.h:188: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x1d3): In function `VDRING_init':
+../../vlib/inc/util/vdring.h:43: multiple definition of `VDRING_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbd6):../../vlib/inc/util/vdring.h:43: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x1e6): In function `VDRING_isempty':
+../../vlib/inc/util/vdring.h:54: multiple definition of `VDRING_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbe9):../../vlib/inc/util/vdring.h:54: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x1f9): In function `VDRING_insert_before':
+../../vlib/inc/util/vdring.h:64: multiple definition of `VDRING_insert_before'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xbfc):../../vlib/inc/util/vdring.h:64: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x226): In function `VDRING_insert_after':
+../../vlib/inc/util/vdring.h:78: multiple definition of `VDRING_insert_after'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc29):../../vlib/inc/util/vdring.h:78: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x241): In function `VDRING_unlink':
+../../vlib/inc/util/vdring.h:96: multiple definition of `VDRING_unlink'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc44):../../vlib/inc/util/vdring.h:96: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x264): In function `VDRING_push_back':
+../../vlib/inc/util/vdring.h:108: multiple definition of `VDRING_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc67):../../vlib/inc/util/vdring.h:108: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x280): In function `VDRING_push_front':
+../../vlib/inc/util/vdring.h:118: multiple definition of `VDRING_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc83):../../vlib/inc/util/vdring.h:118: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x299): In function `VDRING_pop_front':
+../../vlib/inc/util/vdring.h:128: multiple definition of `VDRING_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xc9c):../../vlib/inc/util/vdring.h:128: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x2dd): In function `VDRING_pop_back':
+../../vlib/inc/util/vdring.h:145: multiple definition of `VDRING_pop_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xce0):../../vlib/inc/util/vdring.h:145: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x323): In function `VDRING_get_first':
+../../vlib/inc/util/vdring.h:158: multiple definition of `VDRING_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd26):../../vlib/inc/util/vdring.h:158: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x351): In function `VDRING_get_last':
+../../vlib/inc/util/vdring.h:166: multiple definition of `VDRING_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd54):../../vlib/inc/util/vdring.h:166: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x380): In function `VDRING_get_next':
+../../vlib/inc/util/vdring.h:175: multiple definition of `VDRING_get_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xd83):../../vlib/inc/util/vdring.h:175: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x3a6): In function `VDRING_get_prev':
+../../vlib/inc/util/vdring.h:185: multiple definition of `VDRING_get_prev'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xda9):../../vlib/inc/util/vdring.h:185: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x3ce): In function `VDRING_size':
+../../vlib/inc/util/vdring.h:240: multiple definition of `VDRING_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdd1):../../vlib/inc/util/vdring.h:240: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x3fa): In function `VDRING_get_nth':
+../../vlib/inc/util/vdring.h:256: multiple definition of `VDRING_get_nth'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xdfd):../../vlib/inc/util/vdring.h:256: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x43f): In function `VDRING_get_nth_reverse':
+../../vlib/inc/util/vdring.h:272: multiple definition of `VDRING_get_nth_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe42):../../vlib/inc/util/vdring.h:272: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x467): In function `VDRING_findif':
+../../vlib/inc/util/vdring.h:305: multiple definition of `VDRING_findif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xe6a):../../vlib/inc/util/vdring.h:305: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x549): In function `VDRING_find_reverse':
+../../vlib/inc/util/vdring.h:355: multiple definition of `VDRING_find_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0xf4c):../../vlib/inc/util/vdring.h:355: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x630): In function `VDRING_deleteif':
+../../vlib/inc/util/vdring.h:404: multiple definition of `VDRING_deleteif'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x1033):../../vlib/inc/util/vdring.h:404: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x6bf): In function `VDRING_deleteall':
+../../vlib/inc/util/vdring.h:431: multiple definition of `VDRING_deleteall'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x10c2):../../vlib/inc/util/vdring.h:431: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x739): In function `VDRING_reverse':
+../../vlib/inc/util/vdring.h:452: multiple definition of `VDRING_reverse'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x113c):../../vlib/inc/util/vdring.h:452: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x7ab): In function `VDRING_check':
+../../vlib/inc/util/vdring.h:482: multiple definition of `VDRING_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./test.o(.text+0x11ae):../../vlib/inc/util/vdring.h:482: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x7fd): In function `VDLISTUNROLLED_init':
+../../vlib/inc/util/vdlistunrolled.h:72: multiple definition of `VDLISTUNROLLED_init'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1235):../../vlib/inc/util/vdlistunrolled.h:72: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x862): In function `VDLISTUNROLLED_check':
+../../vlib/inc/util/vdlistunrolled.h:95: multiple definition of `VDLISTUNROLLED_check'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x129a):../../vlib/inc/util/vdlistunrolled.h:95: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x93e): In function `VDLISTUNROLLED_isempty':
+../../vlib/inc/util/vdlistunrolled.h:138: multiple definition of `VDLISTUNROLLED_isempty'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1376):../../vlib/inc/util/vdlistunrolled.h:138: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x950): In function `VDLISTUNROLLED_size':
+../../vlib/inc/util/vdlistunrolled.h:144: multiple definition of `VDLISTUNROLLED_size'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1388):../../vlib/inc/util/vdlistunrolled.h:144: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x95b): In function `VDLISTUNROLLED_maxsize':
+../../vlib/inc/util/vdlistunrolled.h:150: multiple definition of `VDLISTUNROLLED_maxsize'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1393):../../vlib/inc/util/vdlistunrolled.h:150: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x966): In function `VDLISTUNROLLED_get_first':
+../../vlib/inc/util/vdlistunrolled.h:160: multiple definition of `VDLISTUNROLLED_get_first'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x139e):../../vlib/inc/util/vdlistunrolled.h:160: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x990): In function `VDLISTUNROLLED_get_last':
+../../vlib/inc/util/vdlistunrolled.h:176: multiple definition of `VDLISTUNROLLED_get_last'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x13c8):../../vlib/inc/util/vdlistunrolled.h:176: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0x9db): In function `VDLISTUNROLLED_next':
+../../vlib/inc/util/vdlistunrolled.h:196: multiple definition of `VDLISTUNROLLED_next'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1413):../../vlib/inc/util/vdlistunrolled.h:196: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xa33): In function `VDLISTUNROLLED_prev':
+../../vlib/inc/util/vdlistunrolled.h:218: multiple definition of `VDLISTUNROLLED_prev'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x146b):../../vlib/inc/util/vdlistunrolled.h:218: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xaa2): In function `VDLISTUNROLLED_check_position':
+../../vlib/inc/util/vdlistunrolled.h:241: multiple definition of `VDLISTUNROLLED_check_position'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x14da):../../vlib/inc/util/vdlistunrolled.h:241: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xae3): In function `VDLISTUNROLLED_copy_at':
+../../vlib/inc/util/vdlistunrolled.h:260: multiple definition of `VDLISTUNROLLED_copy_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x151b):../../vlib/inc/util/vdlistunrolled.h:260: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xb57): In function `VDLISTUNROLLED_at':
+../../vlib/inc/util/vdlistunrolled.h:283: multiple definition of `VDLISTUNROLLED_at'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x158f):../../vlib/inc/util/vdlistunrolled.h:283: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xb9f): In function `VDLISTUNROLLED_insert_before':
+../../vlib/inc/util/vdlistunrolled.h:308: multiple definition of `VDLISTUNROLLED_insert_before'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x15d7):../../vlib/inc/util/vdlistunrolled.h:308: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xbe2): In function `VDLISTUNROLLED_push_back':
+../../vlib/inc/util/vdlistunrolled.h:331: multiple definition of `VDLISTUNROLLED_push_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x161a):../../vlib/inc/util/vdlistunrolled.h:331: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xc16): In function `VDLISTUNROLLED_push_front':
+../../vlib/inc/util/vdlistunrolled.h:344: multiple definition of `VDLISTUNROLLED_push_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x164e):../../vlib/inc/util/vdlistunrolled.h:344: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xc4a): In function `VDLISTUNROLLED_pop_back':
+../../vlib/inc/util/vdlistunrolled.h:358: multiple definition of `VDLISTUNROLLED_pop_back'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1682):../../vlib/inc/util/vdlistunrolled.h:358: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xcd1): In function `VDLISTUNROLLED_pop_front':
+../../vlib/inc/util/vdlistunrolled.h:386: multiple definition of `VDLISTUNROLLED_pop_front'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1709):../../vlib/inc/util/vdlistunrolled.h:386: first defined here
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vunrolledlist.o(.text+0xd58): In function `VDLISTUNROLLED_free':
+../../vlib/inc/util/vdlistunrolled.h:452: multiple definition of `VDLISTUNROLLED_free'
+/users/mmoser/code//linux/obj//disks/uilstore6/disk602/mmoser/code/vlib/test/./vmemory.o(.text+0x1790):../../vlib/inc/util/vdlistunrolled.h:452: first defined here
+ld: cannot find -lvutil
+gmake: *** [test] Error 1

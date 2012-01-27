@@ -1,0 +1,38 @@
+The PROBLEM REPORTING FORM
+makes our support more effective.
+
+Please, subscribe to our mailing list here:
+https://lists.sourceforge.net/lists/listinfo/curl-loader-devel
+
+and mail the form to the mailing list:
+curl-loader-devel@lists.sourceforge.net
+
+
+CURL-LOADER VERSION: version 0.56, unstable, January 10, 2012, svn 589
+
+HW DETAILS: CPU/S and memory are must:
+
+LINUX DISTRIBUTION and KERNEL (uname -r):
+
+GCC VERSION (gcc -v):
+
+COMPILATION AND MAKING OPTIONS (if defaults changed):
+
+COMMAND-LINE:
+
+CONFIGURATION-FILE (The most common source of problems):
+Place the file inline here:
+
+
+DOES THE PROBLEM AFFECT:
+       COMPILATION? No
+       LINKING? No
+       EXECUTION? No
+       OTHER (please specify)?
+Have you run $make cleanall  prior to $make ?
+
+
+DESCRIPTION:
+
+
+QUESTION/ SUGGESTION/ PATCH:

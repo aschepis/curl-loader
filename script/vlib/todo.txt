@@ -1,0 +1,111 @@
+Question:
+    VCONTEXT - include reset allocator in vtable interface?
+
+====================================================================
+Documentation:
+--------------
+
+IN means the parameter is only read and left untouched
+
+OUT means that the parameter will be written to, *but its original contents will be ignored*, 
+
+IN OUT means that the parameter will be read from *and* written to. Try to express that with "const". 
+
+OPTIONAL means that a zero can be passed for that parameter, and it won't affect the function.
+
+http://discuss.fogcreek.com/joelonsoftware1/default.asp?cmd=show&ixPost=10506&ixReplies=15
+
+
+==================================================================
+ONWRAPUP:
+  common directory structure
+  inc
+    memalloc
+    util
+    etc.
+  src
+    memalloc
+    util
+    etc.
+==================================================================
+TODO
+
+  general io gadget (???) (BIO - VIO)
+    [parsing framework ??? ]
+       configuration file
+	  logging/tracing (KuKu)
+
+
+- all data structures (most) - merge two objects
+	- relevant for: lists, dynamic arrays, hash tables, heaps? 
+
+- sorting
+    (what kind of sorting - stable/unstable?)
+	- interesting: glibc does mergesort for smaller arrays and quicksort for large arrays. 
+
+
+- unrolled list - functional interface
+  General: functional/MACRO interface for iteration over range
+  Delete function: (like unrolled list/heaps).
+  compact function (if number of elements falls below half used, try to push elements to adjacent lists.
+ 
+
+- object serialisation .... whats the best way ?
+			
+
+TEST TES TESTS
+  test - have to test reverse list, nth element access.  
+  test - more test for string.
+  ring buffer - test compaction, bulk add.
+
+  - test coverage? on gcc only!
+  - valgrind run on gcc!
+TOADD:
+ 
+  
+  Search trees - radix trees in particular.  
+  splay trees, red black trees?; avl trees?
+  Property lists: PLISTS - configuration interface.
+
+	
+  Coalesced hashing is cool - add it.
+  
+  memory allocator - read stuff
+   - learn from heaplayers. do somehting similar.
+ 
+  IO buffer - what is missing from BIO?
+    - what are the requirements for BIO?
+
+
+
+BIG TOYS
+
+  parsing framework?
+  protocol generation?
+   
+
+ADD 
+
+  unit test with performence in mind (measures execution time of tests + repeat test).
+    
+  make friends with doxygen
+
+  VCONTEXT - add some dynamic array as member (per context memory (like portable tls)).
+
+  What about locking????
+    decide what to do.
+
+INVESTIGATE
+  lockless data structures
+
+CHANGE  
+  common error codes instead of -1 (ERRNO numbers can be used ???)
+
+
+=========================
+- consistant naming of structure members (make up a dictionary).
+  Common naming schema for member vars.
+	elmsize - size of one element.
+	elmcount - current number of elements.
+	elmmaxcount  - space allocated for a maximum number of elements.
+	    buffer	     - data area.

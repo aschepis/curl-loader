@@ -1,0 +1,5 @@
+
+tst/err_shadow.v(7): error Can't define variable x, it is already defined as a variable definition, first definition at line 5 column 9
+      7 |  var x
+        |....^^^
+*** ERROR semantics or code generation ***

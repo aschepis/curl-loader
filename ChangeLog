@@ -1,0 +1,924 @@
+version 0.56, unstable, January 10 2012, svn 589
+
+* Fixed a linking bug with gcc-4.6. This version
+   of gcc requires system libraries, like -lrt, to follow after
+   application libraries (-lcurl, -levent) that are using the system libraries.
+   Thanks to Eric Mueller, emueller@arbor.net for reporting the issue
+   and testing patches.
+   
+
+version 0.55, unstable, January 9 2012, svn 588
+	
+* Bug in curl library required advancing to version
+  where the issue is supposed to be fixed.
+  At Ubuntu 10.4 building with SSL generate reporting 
+  about "undefined reference to `SSLv2_client_method'"
+	
+* HTTP 1.1 HEAD and DELETE methods added.
+   Thanks to Wei Guo, weiguo85@gmail.com
+	
+
+version 0.54, stable, January 2 2012, svn 587
+	
+* Fixed static linking to c-ares
+
+* Disabled IPv6 in Makefile when building curl.
+  Somehow that creates issues at Ubuntu.
+
+* Fixed a crashing bug when running with -t option (multi-threading loading).
+   Thanks to Shao, Shuchao (Simon) sshao@websense.com for
+   finding the issue and providing the initial patch for fixing it.
+
+
+version 0.53, March 11 2011, svn 584
+
+* Updated to the latest libcurl, libevent and c-ares;
+
+* Fixed compilation issue at Fedora-8 with 
+    extern declaration of pread in parse_conf.c;
+
+* Added patch providing URL randomization.
+  Thanks to Pranav Desai <pranavadesai@gmail.com> for this patch.
+
+	
+version 0.52, stable, June 12 2010, svn 578
+	
+* Probability of using URLs was broken.
+   Thanks to Val Shkolnikov <val@nvsoft.net> the patch restoring it back
+    and for testing it.
+
+* Loading of configuration files sometimes failed due to passing to strtok
+   a char instead of a string.
+   Thanks to Val Shkolnikov <val@nvsoft.net> the patch fixing it.
+
+* Some servers are wrong with regards to content length, that they
+  are reporting. This happens for some video streaming.
+  Added a new tag to ignore server-reported context length.
+  Thanks to Pranav Desai <pranavadesai@gmail.com> for this patch
+
+
+version 0.51, stable, January 18, svn 574
+
+* Releasing a new stable version. The last stable has been release
+  in October 2007
+* Updated to the most recent libcurl and libevent libraries
+* DNS resolving now works via c-ares library.
+  Thanks to Val Shkolnikov <val@nvsoft.net> for this suggestion and patch.
+
+version 0.50, unstable, September 21, svn 570
+
+* Advanced to curl-19.6, which is closing dead connections faster
+  and contains other important fixes.
+
+By Val Shkolnikov <val@nvsoft.net>
+
+* Added a fixed request rate feature.
+  It is a bit risky feature, but "Navigare necesse est ..."
+* Fixed a bug for fixed-rate, where curl-loader would not stop on run time 
+  expiration or url completion
+
+By Val Shkolnikov <val@nvsoft.net>
+* Directed operational statistics into a file with the extension .ops
+* Added DUMP_OPSTATS and RUN_TIME options.
+* Added time stamp to the .log file, streamlined logging using macros.
+* Added a second -v option for varied level of logging detail.
+
+* Renamed function getline to get_line since folks from RedHat are 
+   polluting the namespace. Thanks to jari pietila <jari2004@hotmail.com>
+   for reporting that.
+
+* Fixed x86_64 arch related bug in parse_conf.c Thanks to nobody/anonymous.
+
+
+version 0.49, unstable, July 5, 2009, svn 561
+
+* Corrected weirdness in parse_conf.c Thanks to nobody/anonymous.
+
+* Making of libcurl without support for SSH. Some platforms do not
+   have libssh2 installed and it breaks our build.
+
+* Post an XML-file as a body of POST request.
+  An example of configuration file is conf-examples/post-xml.conf, where the XML-file itself is
+  residing in the same configuration directory, namely conf-examples/some.xml
+  The majic is now done by:
+  REQUEST_TYPE=POST
+  MULTIPART_FORM_DATA="file=@some.xml"
+
+* Advanced to libevent-1.4.11-stable, which fixes several nastry epoll bugs.
+
+
+version 0.48, unstable, April 9, 2009, svn 556
+
+* Advanced to curl version 19.4 with several bugfixes in the area
+  of multi-handle transfers, HTTPS, FTP/S and cookies handling.
+
+* Work-around for the bug involving reading from file and using fgets,
+   when gcc-4.3 is used with optimization. It is done by compiling the file
+   parse_conf.c without optimization. Since the functionality of the file 
+   matters only for reading configuration upon start, it is not supposed
+   to impact performance.
+
+* Added -x command-line option to let explicitly specify a proxy server. 
+  By using the curl-loader option -x, curl-loader can be
+  forced to set or unset a proxy independend of .curlrc and environment, making the
+  proxy usage more transparent.
+  Thanks to Frank <Frank_Migge@manulife.com> for this patch.
+
+version 0.47, unstable, December 2, 2008, svn 551
+	
+* Fixed a POST-binary bug, where an extra check was preventing direct
+   posting.
+   Thanks to Alex <alex2048@gmail.com> and Gary Fitts <gary@intouchgroup.com>
+	
+* Fixed a bug on 64-bit ubuntoo, originating most probably from the
+   wrong compiler optimization and running on an SMP machine, where 
+   configuration files has failed to be loaded.
+   Thanks to Sergei Shnaidman <sergei.shnaidman@qik.com> for 
+   reporting, debugging and testing the fix.
+
+* Integrated a great contribution from Gary Fitts <gary@intouchgroup.com>
+  - template URL, where throusands URLs specifying by a single template is an option;
+  - fetching of response tokens from the bodies of responses and usage them in template URL;
+  - usage of statically defined in file tokens for template URL;
+  - fixing of several bugs in that area
+  - introduced new tags: 
+   URL_TEMPLATE, RESPONSE_TOKEN, URL_TOKEN, URL_TOKEN_FILE
+
+* UPLOAD_FILE bug fixed, where the same file-pointer for uploading was shared 
+   among mulitple clients. Thanks to  Gary Fitts <gary@intouchgroup.com>.
+	
+*  Added for "Template URL" README and man pages, usage examples.
+
+
+version 0.46, unstable, Sep 3, 2008, svn 534
+
+* Advanced to curl-7.19.0 with more relevant fixes, particular in the
+  area of multi-transfer and FTP bug fixes.
+	
+* Compilation fix for some linux-distros, like recent gentoo, by adding 
+  #include <limits.h> in ip_secondary.c. Thanks to Aleksandar Lazic <al-curlloader@none.at>
+  for reporting it.
+
+* Proxy authentication bug fixed by Francois Pesce <francois.pesce@gmail.com>
+  curl-loader now tested and works with proxies.
+
+version 0.45, unstable, May 17, 2008, svn 531
+
+* Advanced to libevent-1.4.4, which is supposed to deliver
+  better performance for high loads
+
+* Corrected the patch changing the NEVENT number.
+  The patch was not applied in previous versions, limiting the number
+   of virtual clients to only 32K
+
+
+version 0.44, stable, October 21, 2007, svn 524
+
+* Fixed bug crashing curl-loader, when run with -d command line option.
+   Thanks to Iliyan Peychev <iliyan.peychev@gmail.com> for reporting it.
+
+* Increased size of the parser buffer to consume long url strings from configuration
+   files. 
+   Thanks to Iliyan Peychev <iliyan.peychev@gmail.com> for suggesting it.
+
+* Fixed building bug on systems with ldap development package installed.
+   Added --disable-ldap option to libcurl configure script.
+   Thanks to Mehdi Khalilzadeh <mehdi_khalilzadeh@yahoo.com> for reporting it.
+
+
+version 0.43, September 18, 2007, svn 514
+
+* Advanced to curl-7.17.0 recent version with more FTP bugfixes.
+
+* Resolved IPv6 bug, when using a dedicated IPv6-address per client.
+   It was broken with the first address used by all virtual clients. 
+
+* Tag IP_SHARED_NUM added to enable multiple clients to use not a 
+   single common IP and not a unique IP-address, but several IP-address.
+   If IP_SHARED_NUM=3, first client gets the first address, second the second,
+   third gets the third, whereas the forth client gets back the first address and so on.
+   The feature should enable to support more than 64K loading clients without
+   a need to assign a unique address to each client (which has its memory price and
+   its own limitations). 
+	
+   Thus, to enable 200K loading clients, one can use about 64K clients per address
+   and IP_SHARED_NUM=4 will be enough for such cases.
+   The feature can be useful also, when somebody is not willing to use a unique
+   IP per client, but does not like, that all clients are coming from the same IP-address.
+   An example of the IP_SHARED_NUM usage is in ./conf-examples/bulk.conf
+	
+   IP_SHARED_NUM=1 is the cases of the so-called "common-IP" for all clients.
+   Still defining the same IP-address in IP_ADDR_MIN and IP_ADDR_MAX will
+   work as before for backward compartibility, and no need to specify IP_SHARED_NUM=1.
+
+
+* Corrected, hopefully, finally, an issue of PAGE_SIZE, using getpagesize().
+
+* Added an option to use random records from file for url.
+  One can load a 10000 records and use them in a random fashion for
+  1000 clients. We are not ensuring uniquickness of records used.
+  Two more tags added to assist in doing that: FORM_RECORDS_FILE_MAX_NUM
+  the number of records to load from a records file, and FORM_RECORDS_RANDOM,
+  which says to the program to use the records loading randomly and not to link
+  each records to a client by index.
+  Note, that tag FORM_RECORDS_FILE_MAX_NUM should be prior to the tag 
+  FORM_RECORDS_FILE.
+  File with example of usage added is: ./conf-examples/random_file_records.conf
+
+version 0.42, stable, September 05, 2007, svn 503
+
+* Detailed logging option (-x) added outputs to <batch-name>.log file all
+   request and response headers and bodies. Recommended not to combine
+  it with verbose -v.
+  This option was suggested by Artur Barashev <artvbar@gmail.com> and
+  is supposed to enable HTTP and FTP request/responses tracing for encrypted
+  HTTPS/FTPS traffic, where sniffers are not helpful.
+
+* CentOS 64-bit was reported not defining PAGE_SIZE in <asm/page.h>
+  Added a workaround to enable compilation.
+
+* When FRESH_CONNECT=1 tag is specified for FTP URLs, new 
+  FTP connections have been opened in due course, but old FTP connections 
+  were kept forever and not closed. The bugfix committed to SVN forces old 
+  connections to be closed.
+
+  Current behavior is the following:
+   a) an established control FTP-connection is closed immediately just after a 
+       file transfer is accomplished;
+   b) an established data FTP-connection is not closed after transfer, but is kept 
+      during sleeping time and goes closed only after a new data connection is opened;
+
+  Current behavior still may require to define twice higher number of connections 
+  allowed by your FTP server, than the number of clients in curl-loader.	
+  Thanks to John Gatewood Ham <buraphalinuxserver@gmail.com> for
+  reporting the problem and testing patches.
+
+
+version 0.41, July 26 2007, svn 492
+
+* Critical bug, where loading credentials/tokens from file has been
+   broken. Thanks to Artur Barashev <artvbar@gmail.com> for this
+   patch.
+	
+* Building libcurl with --without-libidn option. This creates mainly
+   building problems. Users, that would like to resolve IDNA domain
+   names with "international" letters should build it with
+   --with-libidn=full-path-dir.
+
+* Setting empty cookies to CURL handle only for the very first url.
+  The bug has been reported by Artur <artvbar@gmail.com> Fixed?
+
+* Advanced to curl-7.16.4 recent release. Patch ./patches/curl-hash.patch
+  moved to curl mainline, and, therefore, is not necessary and removed.
+
+* Makefile DESTDIR to support make install DESTDIR=/some/fake/root
+  for packaging purposes. Thanks to John Gatewood Ham
+  <buraphalinuxserver@gmail.com> for this patch.
+
+
+version 0.40, July 5 2007, svn 468
+
+* Tag FETCH_PROBABILITY adds support in order a client (virtual)
+   to deal with a URL not as a must, but with a certain probability.
+   The allowed values are in the range from 1 to 100 percents. If one needs
+   a zero percent probability, he can just remove/comment-out the url from
+   the batch-file. When somebody places 100, it means, that the tag can be 
+   actually commented out, because the url is a must.
+   How it works? When a client comes to a url, it examines, whether the url
+   should be fetched with a certain probability and not for certain. If the url
+   is a MUST (no tag FETCH_PROBABILITY), the client fetches the url.
+   If the tag is configured, the client makes a random decision and with
+   a probability of the tag value fetches the url. If the url is not to be fetched,
+   the client goes to the next url or, when there are no other urls,
+   increases the cycles count.
+   Tag FETCH_PROBABILITY_ONCE forces the decision of a client regarding
+   each url to be done only once upon the first cycle and to be remembered for 
+   other cycles.
+
+   The feature is a fresh one and not tested intensively.
+
+* Random timers added as an option to TIMER_AFTER_URL_SLEEP = 0-2000,
+   which means, that a client will sleep for some random time from 0 to 2000 
+   millisec. It can be an option also to TIMER_URL_COMPLETION, whereas
+   less useful. 
+   Files url.c and ./conf-examples/timers-random-range.conf added to svn.
+
+* Bugfix Common-IP (same minimal and max ip addresses) was buggy for
+  SMP configurations.
+
+* Corrected Timeouted to "Timed Out". Thanks to BuraphaLinux Server
+  <buraphalinuxserver@gmail.com> for the patch.
+
+* Advanced to curl-7.16.3. Several patches removed as they are now in 
+   mainline curl. Re-based and corrected patch curl-hash.patch, submitted it to curl.
+
+* Throughput limit for download/upload operations can be configured for each client 
+   now on a per-url bases using a new tag TRANSFER_LIMIT_RATE. The value of
+   the tag to be provided as bytes (not bits) per second.
+   Makefile: -D_FILE_OFFSET_BITS=64 - added to compiling to ensure support for
+   large files (>4GB).
+
+* Initial support for multipart form data POST-ing as in RFC1867 has been added. 
+   Several tags MULTIPART_FORM_DATA can be used for a url to post in a 
+   configuration file, e.g. as in ./conf-examples/multipart-formdata-post.conf:
+	
+   MULTIPART_FORM_DATA="yourname=Michael"
+   MULTIPART_FORM_DATA="filedescription=Cool text file with cool text inside"
+   MULTIPART_FORM_DATA="htmlcode=<HTML></HTML>;type=text/html"
+   MULTIPART_FORM_DATA="file=@cooltext.txt"
+   MULTIPART_FORM_DATA="coolfiles=@fil1.gif,fil2.txt,fil3.html"
+
+   Currently, the feature uses the strings provided AS_IS and does not generate
+   any unique users, unique passwords or loads tokens from file.
+   To prevent from sending "Expect: 100-continue", pass as a custom HTTP header
+   HEADER="Expect: "
+	
+   Still, should be tested as we do not have and server side for that.
+
+
+
+version 0.32, 21/06/2007, svn 431
+
+* Newly added tag per url RESPONSE_STATUS_ERRORS supports changes to the
+   default set of response statuses considered by errors. By default 4xx without
+   401 and 407 and all 5xx response codes are treated as errors.
+   Now you can either add a status to the errors or remove it. Sign + adds, - removes.
+   The syntaxes is a line of tokens separated by ',', where each tokens begins with either
+   + or - and is followed by the response status number from 0 up to 600.
+	
+   For example,  the effect of RESPONSE_STATUS_ERRORS="+200,-404"
+   is that 200 responses will be considered for that url as errors, whereas 404 
+   will be considered as success. File ./conf-examples/resp_errors.conf added.
+
+* Support of form-post tokens file (former credentials file) has been enhanced
+   to use up to 16 tokens, which means up to 16 forms to fill.
+   New separators added with the following supported: , : ; @ / and space.
+
+* Fixed a bug with ramp-up being stopped occasionally a long prior
+   to the clients number reached the desired CLIENTS_MAX_NUM.
+
+  That occured due to the ramp-up timer being cancelled by mistake/bug.
+  What happend is that for periodic timers till the timer handling routine returns, 
+  the slot (timer-id) is free and can be occupied by the timer we schedule in the
+  timer-handling routine.  Thus, it creates a bug with the two timers having the 
+  same timer-id.
+
+  Ramp-up timer was cancelled by the url-timeout monitoring timers, scheduled in
+  load_next, called by timer handling of ramp-up periodic timer.
+
+  The fix included reservation of the timer slot for periodic timers. The slot is
+  released explicitly, if the timer-handling routine fails with error (returns -1).
+
+
+* SMP/multi-cores initial support added. When -t <n> command line option 
+   is provided, the batch clients are devided to <n> sub-batches, each in charge
+   for CLIENTS_MAX_NUM / <n> clients. The sub-batches are run from the 
+   independent threads, whereas the statistics is collected by the thread running
+   the group-leader, so-called master thread.
+   
+* GET forms are supported now. The example configuration is in
+   ./conf-examples/get-forms.conf
+
+* Fixed bug introduced with dynamic allocation of buffer for FORM_STRING
+	
+* Buffer for FORM_STRING value to be allocated on-demand
+   and dynamically and not to be limited to 256 bytes as before.
+
+* Bug fixed, that responses logged using LOG_RESP_BODIES=1
+   or LOG_RESP_HEADERS=1 went to the subdirectory of the previous
+   url, when an empty/current url was used, e.g. on POST after GET.
+   Responses logging to files functionality separated to a dedicated function
+   set_response_logfile (struct client_context* cctx, struct url_context* url)
+   The function is called also from the code, where current url obtained by 
+   prev GET is prepared for POST-ing of credentials.
+  
+
+version 0.31 - released 31/05/2007, svn 399
+
+* Tag TIMER_URL_COMPLETION is a rename of UAS_URL_MAX_TIME
+    now comes in milliseconds and enforced. When a value of the tag is
+   above 0, we are monitoring the url-fetching and cancelling it, if above
+   the specified milliseconds.
+   The results are presented on the Load Status GUI as the operation Timed out
+   statistics and is reflected in files as T-Err number.
+   When a url fetch is cancelled on the url-completion timeout, the number of Failed
+   operations also increases.
+
+* Added an option to log response body-bytes and headers to 
+   files. To log body bytes add tag LOG_RESP_BODIES=1 to your
+   configuration file. To log headers add LOG_RESP_HEADERS=1.
+   See log_hdr_body.conf as an example.
+
+   Directory <batch-name> is created with subdirs url0, url1, url<n>
+   Each url subdir contains files named
+   cl-<client-num>-cycle-<cycle-num>.body or
+   cl-<client-num>-cycle-<cycle-num>.hdr respectively.
+
+   Note, that output to file is currenly done in a most simple way
+   and seriously impacts performance. Use it only with a small number
+   of clients and for a few cycles.
+
+* Added statistics for 1xx HTTP responses (100 and 101).
+	
+* Authentication (web and proxy) re-worked to make authentication
+   method configurable using tags WEB_AUTH_METHOD and
+   PROXY_AUTH_METHOD. Credentials may be specified by
+   the tags WEB_AUTH_CREDENTIALS and PROXY_AUTH_CREDENTIALS.
+   When no credentials are specified, we are building them using username
+   and password as the syntax <username>:<password>
+
+* HTTP PUT support added. URL should contain a filename,
+   not only the directory. A path to upload file should be specified by
+  the tag UPLOAD_FILE.
+
+* Load Status GUI with statistics presentation improved.
+   Current and summary operational number are presented
+   together: first number is currect, seconds is the summary. 
+	
+* FTP tested and improved. Minor bug fixed in loader.c
+  File ftp.conf file corrected by adding FRESH_CONNECT tag.
+  Added a new file ftp_http.conf.
+  Added a tag to support active FTP: FTP_ACTIVE
+  FTP uploading tested to be supported.
+  File ftp_upload.conf configuration added.
+   
+  Note, that proftpd as well as other servers have a few DOS protection
+  options. Take care to configure them properly and look also in your server
+  logs, don't blame as for every error.
+
+* Added an option to configure a single common ip-address for all clients.
+  When IP_ADDR_MIN and IP_ADDR_MAX configured values are the same
+  it will be interpreted both for IPV4 and IPV6 as a signal to re-use the IP for
+  all clients. If the address does not exist, it will be added to the interface 
+  specified by the tag INTERFACE.
+	
+* New tag TIMER_TCP_CONN_SETUP provides an option to over-write a global
+  configurable default and to configure for a url a timeout for TCP connection 
+  establishment (including resolving).
+	
+* Added new taq FRESH_CONNECT will enable to change the default 
+  behavior and to close/re-open TCP connection.
+	
+* Tags simplified to support:
+   - POST (in future also PUT) for any url;
+   - make several subsequest POST-ings;
+   - provide a more flexible configuration with multiple-Logins, Logoffs,
+     and authentications.
+
+* Tag CLIENTS_NUM renamed to CLIENTS_NUM_MAX
+
+   Tag CLIENTS_INITIAL_INC renamed to CLIENTS_RAMPUP_INC
+
+  Tag URLS_NUM, a rename of UAS_URLS_NUM, moved to section
+  General. Sections LOGIN and LOGOFF removed, UAS section renamed
+  to URL-section
+	
+  Tag URL_USE_CURRENT will serve to enable POST/PUT on a previous
+  url, e.g. obtained by the previous GET/POST/PUT. Thus, old tags 
+  <LOGIN/LOGOFF>CYCLING are not in need any more.
+	
+  Tag URL_DONT_CYCLE will mark a url as not-cycled, which should be 
+  fetched only once.
+	
+  Tag CUSTOM_HEADER renamed to HEADER and moved to the URL-section
+  level. Thus, headers of each url could be independently customized.
+	
+  Tags USERNAME and PASSWORD moved to the URL level to support for
+  multiple authentications and/or POST-ing of credentials for every URL.
+	
+  Tag URL_SHORT_NAME is a newly added tag to provide a short up to 12
+  character name to appear in statistics presentation.
+	
+  Taq REQUEST_TYPE is a rename of LOGIN_REQ_TYPE, but should appear
+  with every URL with valid strings "GET", "POST" and "PUT", Worth to mention,
+  that "GET" is no more a default and should appear explicitly. Another point is
+  that GET+POST to be arranged in 2 separate URL setting of GET with the next
+  url with POST and tag URL_USE_CURRENT to re-use the fetched url 
+	
+  Taq FORM_STRING is a rename of LOGIN_POST_STR, whereas to control the
+  type there is a tag FORM_USAGE_TYPE to be defined explicitly.
+	
+  Tag FORM_RECORDS_FILE is a rename of CREDENTIALS_FILE.
+	
+  Tag UPLOAD_FILE is a newly added tag to support in future method PUT.
+	
+  New tags WEB_AUTH_METHOD, WEB_AUTH_CREDENTIALS, 
+  PROXY_AUTH_METHOD and PROXY_AUTH_CREDENTIALS will support 
+  explicitly web and proxy authentication.
+
+  New taq FRESH_CONNECT will enable to change the default behavior and 
+  to close/re-open TCP connection.
+
+  New tag TIMER_TCP_CONN_SETUP provides an option to over-write a global
+  configurable default and to configure for a url a timeout for TCP connection 
+  establishment (including resolving).
+
+  Tag TIMER_URL_COMPLETION is a rename of tags 
+  <LOGIN/UAS/LOGOFF>_URL_MAX_TIME 
+  and will be in msec, not in seconds as before.
+
+  Tag TIMER_AFTER_URL_SLEEP is a rename of tags 
+  <LOGIN/UAS/LOGOFF>_URL_INTERLEAVE_TIME
+
+* Storming mode - discontinued
+
+* Support for multiple batches, using threads, dicontinued.
+   The feature may be used internally to shared load among
+   several thread, when using the tool at SMP/multi-core HW.
+   
+
+version 0.30 "stable", 26/04/2007, svn-325
+
+* Memory consumption per virtial client decreased from 60-65 K
+   to 30-35 K by patching and configuring libcurl.
+
+* Load Status GUI enhanced by added +|- options to increase
+   number of clients for 1 or 10, respectively. Added an option to
+   switch back and forth between Automatic and Manual mode
+   of increasing the number of loading clients.
+
+* Load Status GUI strings shorten for a easier fit to a screen.
+
+* Added a new command-line option "-w" to skip out all warnings
+  and suggestions by curl-loader.
+
+
+version 0.29 18/04/2007, svn-299
+
+* Placed suggestions for tcp kernel memory tuning to environment.c
+  Fixed the bug with not-blocking smashing of fd_set.
+	
+* FAST-START file renamed to QUICK-START
+
+* Migration to curl-7.16.2. Patch rename curl_multi_noselect ()
+  to curl_multi_action ()
+
+* Fixed the bug with sprintf overflow of statistics and logs filenames.
+  Thanks to Alexandre Bezroutchko <abb@scanit.be> for pointing
+  this issue.
+
+* Usage of get_time_tick () with gettimeofday () inside has been 
+  decreased by calling it in cycles only for each
+  TIME_RECALCULATION_MSG_NUM (10) cycle.
+	
+* Busy-looping for the default smooth mode has been fixed.
+	
+* Hyper-mode bug fixed with CSELECT_IN event mistakenly used in the
+  instead of CSELECT_OUT.
+
+* Hyper-mode bug fixed with no clients scheduling for load, when
+  CLIENT_INITIAL_INC=0 or the tag is not defined.
+
+* Profiling option (-pg) added to the making line. Run, e.g.
+  make optimize=1 debug=1 profile=1
+
+
+
+version 0.28 08/04/2007, svn- 270
+
+* Improved validation of environment issue (allowed number of open
+   sockets), which are separated to a new file environment.c
+
+* Added PROBLEM-REPORTING file.
+
+* Initial release of our hyper mode. It is really an experimental mode and 
+   requires more testing and optimization. But this is a good start - 
+   Navigare Nesesse Est. Our goal is to reach 50-100 K of HTTP libcurl
+   working connections from a single thread.
+
+* Improved performance of the smooth (default) and hyper
+   mode by exluding unnecessary remove and add of a handle
+   from/to multihandle in setup_curl_handle () in loader.c.
+
+* Improved preformance of all modes by making patch to libcurl
+   (accepted to libcurl mainstream) changing linear traversal of
+   curl_multi_remove_handle () to the single-step lookup.
+
+* LOGIN_POST_STR added an option to generate unique users
+   with the same password. Thanks to Jeremy Brown 
+   <jbrown_at_novell.com> for motivating this feature.
+
+* Improved validation of LOGIN_POST_STR string; the validation moved
+   to parse_conf.c. Size of the buffer for the string increased from 64,
+   which is not enough,  to 256 bytes. Thanks to Jeremy Brown 
+   <jbrown_at_novell.com> for reporting this bug.
+
+
+version 0.27 svn 227
+
+* Added facility to customize/add/over-write HTTP/FTP headers. 
+   Tag CUSTOM_HEADER is serving for this feature. Up to 16 custom 
+   HTTP/FTP headers are allowed. 
+   If a header already exits by default, the custom header over-writes it. 
+   USER_AGENT tag is for User-Agent header only, whereas by 
+   CUSTOM_HEADER may be added or over-written any header (including
+   User-Agent).
+   An example of batch configuration is ./conf-examples/custom_hdrs.conf
+	
+* Fixed crash in statistics, when login operations defined, but logoff not.
+	
+* Added an option to load login credentials (user and password) from a file.
+   A text file with usernames and passwords with the structure of 
+   each string like: <username><separator><password> can be used as an input.
+   According to RFC1738, only reserved ':', '@', '/' and probably ' ' (space) are safe 
+   to use as separators between username and password.
+   Tag LOGIN_CREDENTIALS_FILE specifies the path to the file with
+   credentials (full-path or relative to curl-loader). An example of batch 
+   configuration is ./conf-examples/credentials_fr_file.conf and an example of
+   credentials in ./conf-examples/credentials.cred.
+	
+* Cleanup of allocations and client array initializations in login.c
+	
+* IPv6 support added. Batch configuration conf-example/ipv6.conf
+   and patch patches/curl-ipv6-bind.patch are added. The patch has been
+   integrated to the mainline libcurl, therefore we shall remove it, when moving
+   to the next libcurl release.
+   Our code now actually supports other scopes for IP, than "global". Do we
+   need to make an option to configure scope for IP-address?
+   TODO: IPv6 flow label support?
+	
+* Libevent library added to the making process as a separate
+   making target.
+	
+* Added USER_AGENT tag to the section GENERAL to make HTTP User-Agent 
+   header configurable. When no tag or empty tag or empty tag string is 
+   specified, curl-loader takes the default User-Agent header of MSIE-6 (sorry,
+   FireFox folks).
+
+* Documentation improved, HOWTOS-* files removed with their content
+   moved to README. README file re-worked to have a more structured fashion.
+   FAST-START file added.
+
+* Web-site added.
+	
+
+version 0.26 - svn 151
+
+* Added support for HTTP Authentication and Proxy Authentication.
+   The methods supported are Basic, Digest (RFC2617) and NTLM.
+   When an HTTP server/proxy responds by 401 or 407, libcurl will choose the 
+    most safe method from those, supported by the server/proxy.
+
+* "make menuconfig" opens dialog menu to assist in creation of
+   a loading batch configuration file. Building dialog package requires
+   ncurses development package.
+   Run "make menuconfig" to see, what happens.
+
+* Batch configuration tags since this version can be provided as either quotted 
+   or not quotted. Empty string tags to be marked as "", whereas "N/A" string is
+   still supported for the backward compartibility.
+	
+* Unified making. The script build_curl.sh has gone. Now to build both the libcurl 
+   and curl-loader with optimization, just run:
+   >make cleanall; make optimize=1
+   To build both libcurl and curl-loader with optimization and without
+   debugging:
+   >make cleanall; make optimize=1 debug=0
+
+* CAPS number added to the "standing" Loading Status GUI. It is
+   calculated as the number of the first cycled state, entered by clients 
+   per second.
+
+* 4xx HTTP client error, which are not 401 or 407 (authentication required),
+   are considered now errors.
+
+* Operation statistics added to the "standing" Loading Status GUI, namely,
+   number of url successful or failed for LOGIN, for each UAS url and for 
+   LOGOFF operations;
+
+* "Standing" Loading Status GUI improved with regards to its layout.
+
+
+
+version 0.25, 14/02/2007, svn 121
+
+* "Standing" Loading Status GUI added to present running counters.
+    Looks like a very convenient way for looking at loading in-progress.
+	
+* Added summary statistics of load to be outputted at statistics
+   snapshot intervals together with an interval statistics. Very useful
+   feature.
+	
+* Configuration file tag NETMASK now accepts also netmask as IPv4
+   quad-dotted string, not only as a CIDR number.
+	
+* Command line option -i <seconds> added to make intermediate statistics
+   snapshoting timer configurable.
+
+* Gradual increase of clients number at startup re-worked to use timer and
+    timer-queue.
+
+* Added timer to test periodically the size of logfile in smooth mode. 
+   Command-line option -l < logfile maxsize> now brings another semantics and 
+   provides size limit for a batch logfile in MB (default 1024 MB). When the
+   logfile size limit is reached, the file is rewinded.
+   This closes the issue of unlimited logfile in smooth mode.
+
+* Added to the timer-node pointer to timer handling function <func_timer>. 
+  Timer-queue will use another newly added function <tq_dispatch_nearest_timer>
+  to remove nearest timer node from the timer-queue and call for <func_timer>
+  of the node. Further <tq_dispatch_nearest_timer> re-schedules periodic timers,
+  and manages memory issues against internal mpool of hnodes.
+	
+  This makes handling of timers mode rather Object Oriented.
+
+
+
+version 0.24, 06/02/2007, svn 106
+
+
+* Smooth mode now respects the interleave timeouts between urls,
+   when the timeouts configured to be some values in milliseconds above
+   10 msec. This is achived by keeping clients in the heap-based timer queue.
+   When an interleave timeout is specified as 0, next url or next action of
+    such clients is scheduled immediately without timer-queue scheduling.
+
+* Added support for gradual increase of clients number at the loading
+   start. Use tag CLIENTS_INITIAL_INC in GENERAL section
+   to specify the number of loading clients to be added each second till
+   the total client number, specified by CLIENTS_NUM tag.
+
+* The interleave timeout numbers will be interpreted now as milliseconds,
+   not seconds as before. Take care to update your configuration files.
+
+* Configuration file parser has been re-designed to be based on 
+   TAG-tag_parser_func mapping. The big "object-oriented" parsing switch
+   has been waived out.
+
+* TODO list updated.
+
+* Advanced to the newest libcurl version 7.16.1 to fix several FTP and 
+  multi-handle issues
+
+
+
+version 0.23 06/12/2006, svn-79
+
+* The limitation of 1000 clients per batch have been removed. Try 1500, 2000 and
+  may be even more, but care about number of sockets available and their 
+  recycling.
+	
+* The behavior of -r option has been reverted.
+   The default behavior of curl-loader now is to re-use a tcp-connection for next
+   request-response cycles. If you are specifying -r command-line option, the 
+   connection will be closed and re-opened for the next request. Whether it is
+   appropriate for you to work with -r or without depends on your server support
+   of Keep-Alive, and the purpose of your testing. Try with and without -r and 
+   see, what do you get. Connection reuse default decreases consumption of 
+   opened descriptors (sockets) and ports with sockets in TIME_WAIT states.
+
+* HTTP 4xx client errors are now supported with statistics, logging, etc
+
+version 0.22 28/11/2006, svn-75
+
+* Fixed stack smashing bug after curl_multi_fdset (). Libcurl
+  cannot check, whether our descriptor is within valid FD_SETSIZE
+  range. Therefore, we are increasing FD_SETSIZE and doing the job.
+  Thanks to Evgeniy Polyakov <johnpol@2ka.mipt.ru> for reporting 
+  the problem.
+
+* HOWTOS-BIG-LOAD added to address the appropriate setup for large loads.
+
+version 0.21 22/11/2006, svn-62
+
+* Building bug fix and more explanations about building requirements.
+
+* Code commented mostly and function headers added
+
+* CURL handles moved from array in batch to the client context, to which
+  it belongs
+
+version 0.20 14/11/2006, svn-48
+
+* Bugs fixed in storming mode, where cycling logoff was broken and some
+   interleave timeouts not respected.
+
+* Smooth mode set to be the default loading mode. When libcurl detects an error
+   with a client, by default the client continues loading, starting a new cycle from 
+   the beginning. When -e command line option is specified, client with 
+   libcurl-error will not be scheduled no more for loading.
+
+* Clients table dumped to file $batch_name.ctx. This is done when the loading
+    is accomplished either naturally or by SIGINT.
+
+* SIGINT closes loading and dumps final statistics to statistics file.
+
+* Loading statistics outputted to file $batch_name.txt with the last string as
+   final statistics string, separated by a string with asterisks.
+
+version 0.19 9/11/2006, svn-40
+
+* Loading statistics for HTTP/HTTPS enhanced for smooth-mode and added
+  for storming mode.
+  The statistics includes the following counters:
+   - requests num;
+   - responses success num;
+   - 3xx redirects num;
+   - server 5xx errors num;
+   - other errors num, like resolving, tcp-connect, server closing or 
+     empty responses num;
+   - average application server delay (msec), estimated as the time between 
+     HTTP request and HTTP response without taking into the account network
+     latency (RTT);
+   - average application server delay for 2xx (success) HTTP-responses, as above,
+     but only for 2xx responses. The motivation for that is that 3xx redirections
+     and 5xx server errors/rejects may not necessarily provide a true indication
+     of a testing server working functionality.
+
+* FTP and FTPs support added. Currently it should go to UAS urls section and use
+   for passing user credentials ftp url (RFC 1738), like:
+   ftp://username:password@hostname:port/etc-str
+   File ftp.conf added to configs directory.
+
+* All url-specific context collected to url_context structure to reside in 
+   the new file url.h. Function single_handle_setup () re-worked and HTTP-specific
+   part separated to setup_handle_appl 9) function, which is in preparation to 
+   support more protocols besides http/s.
+
+* THANKS file added.
+* Building directories re-arranged. Directory packages arranged with dialog,
+   and c-ares tarballs added. 
+	
+* Advanced to libcurl 7.16.0.
+
+* Instead of bloody hacking used in loader_smooth.c mperform_smooth () to get
+   access to client_context* cctx, finally we are using setting and getting cctx via
+   PRIVATE pointer API. The hacking broke compiling against libcurl starting 
+   from 7.15.5.
+	
+* Effective URL will be outputted to logfile, thanks for 
+   CURLINFO_EFFECTIVE_URL facility. Usefull to provide real urls
+   after redirections, not just the urls client starts with
+  
+
+version 0.18, 1/11/2006 svn-21
+
+-Major improvement of configuration. Several command line options removed and
+instread the configuration file enhanced. Configuration file separated to several
+sections, namely:
+- GENERAL;
+- LOGIN;
+- UAS (user activity simulation, like fetching URLs and sleeping);
+- LOGOFF;
+Only GENERAL section is a MUST, whereas other sections are enabled whenever
+is necessary, depending on the purpose of the testing. 
+
+-Several more options for LOGIN and LOGOFF parts are added.
+
+- Login and logoff of clients may be configured to be done only once or to
+be cycled with optional UAS-load in between of login and logoff cycles.
+
+- Smooth-loading mode with statistics is finally back to work after being
+broken for a while.
+
+- Options -a, -w and -z removed. Instead of using -a option, one may dublicate
+the login url in UAS section.
+
+
+
+version 0.17, 10/11/2006
+
+-Added ChangeLog and TODO files.
+	
+-README - improved to contain information, available before only
+ from curl_loader -h
+
+-Authentication using POST has been unfortunately disabled in storming
+ mode. Fixed the bug, with thanks to Arik Nahmany, Arik.Nahmany@vocaltec.com,
+ for pointing this.
+
+-Some people may be interested to load their servers with multiple logging of
+ the same user and with the same password. We have allowed a more
+ sophisticated case with user and password incrementing and being unique, but
+ no reason not to support this rather simple case. Added support for this,
+ where, when POST login string contains two %d, we are incrementing username
+ and password, and, if the string lacks any %d symbols, this id the simple
+ case. Thanks to Arik Nahmany, Arik.Nahmany@vocaltec.com for suggesting this
+ feature and testing it.
+
+-Fixed an old bug of storming mode, where the first url used in
+ authentication was also participating in further load. When authentication is
+ required, the first url not to be used in load, unless option '-a' is added to to the 
+ commandline.
+
+-Added support for cookies, which are set in some cases upon authentication.
+
+-Enabled infinitive number of redirections. 
+
+- Logoff operation enabled as GET-only, GET+POST and POST-only. Initially,
+ it was tested for the storming mode. This is managed by the '-w' commandline
+ option, whereas '-z' is in charge for tuning login options between GET+POST 
+and POST-only.
+
+	
+version 0.15
+Basic version to be referred to.
+            Full path to the file (from curl-loader binary), containing login credentials strings
+         formatted as usernameSEPARATORpassword without spaces left. We are supporting 
+         separators ':', '@', '/' and ' ' (space), which according to RFC1738 are safe to use between username 
+         and password. Only one of the above separators to be used in each file.         
+        Note, that when the file with credentials is specified, "Login POST String Matrix" should not contain %d
+         symbols and to be something like  "user=%s&password=%s"
+
+containing credentials lines formatted as 
+          userSEPpasswrd without spaces left. 	

@@ -1,0 +1,139 @@
+.\" Copyright (C) 2007 by John Gatewood Ham
+.\"
+.\" The man pages is licensed under the terms of the GNU 
+.\" General Public License version 2 as
+.\" published by the Free Software Foundation.
+.TH curl\-loader 8 "January 10, 2012" "Version 0.56"
+.SH NAME
+.nh
+.B curl\-loader
+\- tool for testing of web applications, web and ftp servers
+.SH SYNOPSIS
+.nh
+.B curl\-loader
+\-f configfile [options]
+.SH DESCRIPTION
+The
+.B curl\-loader
+.nh
+program is an open source tool written in the C language.  It is used
+for simulating application load and application behavior of many HTTP/HTTPS and 
+FTP/FTPS clients accessing a server machine.  Each client can have its own 
+source IP address. In contrast to other tools, 
+.B curl\-loader 
+uses real client protocol stacks.  The 
+.B curl\-loader
+program uses the HTTP and FTP stacks of libcurl, the TLS/SSL stack of openssl, 
+and it supports several login and authentication flavors. 
+.P
+The 
+.B curl\-loader
+program is useful for performance loading of various application services, 
+using HTTP, HTTPS, FTP and FTPS, for testing web and ftp servers.
+Activities of each virtual client are logged and statistics are collected.
+These statistics include information about: name resolving, connection 
+establishment, sending of requests, receiving of responses, headers and
+data sent and received, errors from the network, TLS/SSL and application 
+(HTTP, FTP) levels. 
+.P
+Virtual clients are grouped together in batches of clients, performing the 
+same sort of activities, like authentication login, user activity simulation 
+by fetching several URLs with configurable timeouts in between requests, and
+logoff.
+.SH REQUIRED ARGUMENT
+.TP
+.B "\-f configfile"
+The instructions for the
+.B curl\-loader
+program are read from a configuration file, and the required
+.B "\-f"
+option is used to specify that file name.
+.SH OPTIONS
+.TP
+.B "\-c #"
+.nh
+Specify connection establishment timeout in seconds.
+.TP
+.B "\-d"
+.nh
+Detailed logging, which outputs to logfile headers and bodies of requests/responses.
+.TP
+.B "\-e"
+.nh
+Error drop client. When an error occurs, the client 
+does not attempt to process the next cycle.
+.TP
+.B "\-l #"
+.nh
+Specify the maximum size of log file in megabytes (default 1024).
+Once the size is reached, the file pointer is rewound.
+.TP
+.B "\-m #"
+.nh
+Specify the mode of loading, with 0 for hyper (the default) or 1 for smooth.
+.TP
+.B "\-r"
+Connections are used only once.  The
+.B
+curl\-loader
+will close connections after each operation and then open a new
+connection for any subsequent operation.
+.TP
+.B "\-t #"
+Specify the number of threads to use for loading sub\-batches of clients.  
+This option is helpful, when running at a multiple CPUs or multiple core CPU HW.
+We are recommending to use the option only for 1000 clients and more loads
+with a number of threads kept about the same as the number of the linux
+logical CPUs as seen by cat /proc/cpuinfo.
+.TP
+.B "\-v"
+Request more verbose output to the log files, including information about 
+the headers sent and received. In some cases\-d option is a more informative.
+.TP
+.B "\-u"
+Activate logging of URLs to the log file, when the \-v verbose option is used.
+.TP
+.B "\-w"
+Do not display warnings.
+.TP
+.B "\-x" "<proxy:port>"
+Use this option to explicitly set or unset the proxy for curl\-loader. For example, you can use \-x "http://192.168.1.1:8080" to set the proxy, or use \-x "" to specifically unset it.
+.SH HINTS
+.nh
+When running a non\-trivial number clients, you may need to tune your system.
+In the GNU bash shell this can be done like this:
+.nf
+
+echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle
+echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse
+cat /proc/sys/fs/file\-max
+YO=$(</proc/sys/fs/file\-max)
+if ((YO<102286))
+then
+  echo 102286 > /proc/sys/fs/file\-max
+fi
+YO=$(</proc/sys/net/core/wmem_max)
+echo "${YO} ${YO} ${YO}" > /proc/sys/net/ipv4/tcp_mem
+
+.fi
+You may need to increase the 102286 value if you need more
+open files and you have enough RAM and CPU to support that
+on your client machine.
+.SH AUTHORS
+The
+.B curl\-loader
+.nh
+program was written by Robert Iakobashvili and Michael Moser.
+.br
+
+This manual page was written by John Gatewood Ham
+.br
+.SH FILES
+/usr/bin/curl\-loader
+.br
+/usr/share/doc/curl\-loader/* for documentation
+.br
+/usr/share/doc/curl\-loader/conf\-examples/* for configuration examples
+.br
+.SH SEE ALSO
+curl\-loader\-config(5)

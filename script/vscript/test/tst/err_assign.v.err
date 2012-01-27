@@ -1,0 +1,13 @@
+
+tst/err_assign.v(7): error Assigning a array to variable declared as scalar
+      7 |a = b
+        |^^^^^
+
+tst/err_assign.v(10): error Assigning a hash to variable declared as scalar
+     10 |a = c
+        |^^^^^
+
+tst/err_assign.v(13): error Assigning a hash to variable declared as array
+     13 |b = c
+        |^^^^^
+*** ERROR semantics or code generation ***

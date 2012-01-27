@@ -1,0 +1,359 @@
+/*
+*
+* 2007 Copyright (c) 
+* Michael Moser,  <moser.michael@gmail.com>                 
+* All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+#ifndef __VMVALUE_H_
+#define __VMVALUE_H_
+
+#include <util/vbasedefs.h>
+#include <string.h>
+
+/* *** enumeration of base types  *** */
+
+typedef enum {
+  VM_STRING  = 1,
+  VM_LONG    = 2,
+  VM_DOUBLE  = 3, 
+  VM_HASH    = 16,
+  VM_ARRAY   = 32,
+
+  VM_CONSTANT = 128
+
+} VM_BASE_TYPE_DEF;
+
+#define VM_IS_CONSTANT(type) ((type) & VM_CONSTANT)
+#define VM_IS_SCALAR(type)   ((type) & 3)
+#define VM_IS_NUMERIC(type)  (VM_IS_SCALAR(type) && VM_IS_SCALAR(type) <= 2)
+
+typedef unsigned char VM_BASE_TYPE;
+
+typedef  union {
+  void *metadata;
+  VM_BASE_TYPE  base_type;
+} 
+  VM_TYPE;
+
+#define VM_TYPE_get_base_type(x) ((VM_TYPE *) (x))->base_type
+
+
+
+/* *** variable type header definitions *** */
+
+typedef struct tagVM_OBJ_HEADER {
+  VM_TYPE type;
+  int ref_count;
+}
+  VM_OBJ_HEADER;
+
+V_INLINE VM_TYPE VM_OBJ_HEADER_type(void *v)
+{
+	return ((VM_OBJ_HEADER *)v)->type;
+}
+
+VM_OBJ_HEADER *VM_OBJ_HEADER_copy_scalar(struct tagVSCRIPTVM *vm, void  *value);
+
+VM_OBJ_HEADER *VM_OBJ_HEADER_new_base_type(VCONTEXT *ctx, VM_BASE_TYPE_DEF var_type);
+
+V_INLINE void VM_OBJ_HEADER_add_ref(void *v)
+{
+	((VM_OBJ_HEADER *)v)->ref_count ++;
+}
+
+void VM_OBJECT_destroy(VCONTEXT *ctx,  VM_OBJ_HEADER *hdr);
+
+V_INLINE void VM_OBJ_HEADER_release(VCONTEXT *ctx,  void *v)
+{
+	VM_OBJ_HEADER * hdr = (VM_OBJ_HEADER *) v;
+
+	if ( -- hdr->ref_count == 0 ) {
+		// relese the object
+		VM_OBJECT_destroy( ctx, hdr );
+	}
+}
+
+/* *** long type header definitions *** */
+
+typedef struct tagVM_VALUE_LONG {
+  VM_OBJ_HEADER base;
+  long val;
+}
+  VM_VALUE_LONG;
+
+#define VM_VALUE_LONG_value(value) ((VM_VALUE_LONG *) value)->val
+
+V_INLINE VM_VALUE_LONG_init_stc( VM_VALUE_LONG *stc, long val )
+{
+  stc->base.type.base_type = VM_LONG;
+  stc->base.ref_count = 1;
+  stc->val = val;
+}
+
+V_INLINE VM_VALUE_LONG * VM_VALUE_LONG_init( VCONTEXT *ctx, long val )
+{
+  VM_VALUE_LONG *ret;
+  
+  ret = (VM_VALUE_LONG *) V_MALLOC( ctx, sizeof( VM_VALUE_LONG) );
+  if (!ret) {
+	return 0;
+  }
+
+  VM_VALUE_LONG_init_stc(ret, val);
+
+  return ret;
+}
+
+/* *** double type header definitions *** */
+
+typedef struct tagVM_VALUE_DOUBLE {
+  VM_OBJ_HEADER base;
+  double val;
+}
+  VM_VALUE_DOUBLE;
+
+#define VM_VALUE_DOUBLE_value(value) ((VM_VALUE_DOUBLE *) value)->val
+  
+V_INLINE VM_VALUE_DOUBLE_init_stc( VM_VALUE_DOUBLE *ret, double val )
+{
+  ret->base.type.base_type = VM_DOUBLE;
+  ret->base.ref_count = 1;
+  ret->val = val;
+}
+
+V_INLINE VM_VALUE_DOUBLE * VM_VALUE_DOUBLE_init( VCONTEXT *ctx, double val )
+{
+  VM_VALUE_DOUBLE *ret;
+  
+  ret = (VM_VALUE_DOUBLE *) V_MALLOC( ctx, sizeof( VM_VALUE_LONG) );
+  if (!ret) {
+	return 0;
+  }
+  VM_VALUE_DOUBLE_init_stc( ret, val );
+
+  return ret;
+}
+
+/* *** string type header definitions *** */
+
+typedef struct tagVM_VALUE_STRING {
+  VM_OBJ_HEADER base;
+  int size;
+  int len; //strlen
+  char *val;
+}
+  VM_VALUE_STRING;
+  
+#define VM_VALUE_STRING_value(value) ((VM_VALUE_STRING *) value)->val
+#define VM_VALUE_STRING_strlen(value) ((VM_VALUE_STRING *) value)->len
+  
+V_INLINE VM_VALUE_STRING * VM_VALUE_STRING_init(VCONTEXT *ctx, size_t len) 
+{
+  VM_VALUE_STRING * ret = (VM_VALUE_STRING *) V_MALLOC( ctx, sizeof(VM_VALUE_STRING));
+  if (!ret) {
+	return 0;
+  }
+
+  if (!len) {
+	  len = 10;
+  }
+
+  ret->val = (char *) V_MALLOC(ctx, len);
+  if (!ret->val) {
+	  V_FREE(ctx, ret);
+	  return 0;
+  }
+
+  ret->base.type.base_type = VM_STRING;
+  ret->base.ref_count = 1;
+  ret->len = len;
+  ret->size = 0;
+
+  if (len == 0) {
+	*ret->val = '\0';
+  }
+
+  return ret;
+}
+
+
+V_INLINE VM_VALUE_STRING * VM_VALUE_STRING_copy(VCONTEXT *ctx, const char *txt, size_t len )
+{
+  VM_VALUE_STRING * ret;
+
+  if (len == -1) {
+	len = strlen(txt);
+  }
+
+  ret = (VM_VALUE_STRING *) V_MALLOC( ctx, sizeof(VM_VALUE_STRING) );
+  if (!ret) { 
+	return 0;
+  }
+
+  if (!len) {
+	  len = 10;
+  }
+
+  ret->val = (char *) V_MALLOC( ctx, len );
+  if (!ret->val) {
+	  V_FREE(ctx, ret);
+	  return 0;
+  }
+
+  ret->base.type.base_type = VM_STRING;
+  ret->base.ref_count = 1;
+  ret->len = len;
+  ret->size = 0;
+  strcpy( ret->val, txt );
+
+  return ret;
+}
+
+V_INLINE void VM_VALUE_STRING_free(VCONTEXT *ctx, VM_VALUE_STRING * val) 
+{
+	V_FREE( ctx, val->val );
+	V_FREE( ctx, val );
+}
+
+int VM_VALUE_STRING_add(VCONTEXT *ctx, VM_VALUE_STRING * val, VM_VALUE_STRING * add );
+
+/* *** array type header definitions *** */
+
+typedef struct tagVM_VALUE_ARRAY {
+  VM_OBJ_HEADER base;
+  int size;
+  int len; // number of elements
+  VM_OBJ_HEADER **val;
+}
+  VM_VALUE_ARRAY;
+
+
+V_INLINE VM_VALUE_ARRAY *VM_VALUE_ARRAY_init( VCONTEXT *ctx, int size) 
+{ 
+  VM_VALUE_ARRAY *ret;
+
+  ret = (VM_VALUE_ARRAY *) V_MALLOC(ctx, sizeof(VM_VALUE_ARRAY));
+  if (!ret) {
+    return 0;
+  }
+
+  ret->val = (VM_OBJ_HEADER **) V_MALLOC( ctx, sizeof(void *) * size );
+  if (!ret->val) {
+	V_FREE(ctx, ret);
+	return 0;
+  }
+
+  ret->base.type.base_type = VM_ARRAY;
+  ret->base.ref_count = 1;
+  ret->size = size;
+  ret->len  = 0;
+
+  return ret;
+}
+
+V_INLINE void VM_VALUE_ARRAY_free( VCONTEXT *ctx, VM_VALUE_ARRAY * arr) 
+{
+  int i;
+
+  for(i = 0; i < arr->len; i++ ) {
+	  if (arr->val[i]) {
+		 VM_OBJ_HEADER_release( ctx, arr->val[i] );	
+	  }
+  }	
+  V_FREE( ctx, arr->val );
+  V_FREE( ctx, arr );
+}
+
+V_INLINE VM_OBJ_HEADER * VM_VALUE_ARRAY_get( VM_VALUE_ARRAY *arr, int idx )
+{
+	if (idx < arr->len) {
+		return arr->val[ idx ];
+	}
+	return 0;
+}
+
+
+V_INLINE int VM_VALUE_ARRAY_set( VCONTEXT *ctx,  VM_VALUE_ARRAY *arr, int idx, VM_OBJ_HEADER *rhs)
+{
+	int sz;
+	VM_OBJ_HEADER **new_val;
+
+	if (idx < arr->len) {
+		VM_OBJ_HEADER_add_ref( rhs );
+		arr->val[ idx ] = rhs;
+		return 0;
+	} 
+
+	sz = idx + 10; // should be some kind of policy
+
+	new_val = (VM_OBJ_HEADER **) V_REALLOC( ctx, arr->val, sz * sizeof(void *));
+	if (!new_val) {
+		return -1;
+	}
+
+	arr->val = new_val;
+	arr->size = sz;
+	
+	VM_OBJ_HEADER_add_ref( rhs );
+	arr->val[ idx ] = rhs;
+
+	return 0;
+	
+}
+
+V_INLINE int VM_VALUE_ARRAY_unset( VCONTEXT *ctx,  VM_VALUE_ARRAY *arr, int idx)
+{
+	VM_OBJ_HEADER * val = arr->val[ idx ] ;
+	if (!val) {
+		return -1;
+	}
+	
+	VM_OBJ_HEADER_release( ctx,  val );
+
+	arr->val[ idx ] = 0;
+
+	// shrink array if unseting last element.
+	if ( idx == (arr->len - 1) ) {
+		arr->len --;
+	}
+
+	return 0;
+}
+
+/* *** hash type header definitions *** */
+
+typedef struct tagVM_VALUE_HASH {
+  VM_OBJ_HEADER base;
+  struct tagVM_VALUE_HASH_BUCKET ** buckets;
+  int num_buckets;
+  int len; // number of elements
+} 
+  VM_VALUE_HASH;
+
+VM_VALUE_HASH *VM_VALUE_HASH_init( VCONTEXT *ctx, int buckets);
+
+
+void VM_VALUE_HASH_free( VCONTEXT *ctx, VM_VALUE_HASH *hash);
+
+
+VM_OBJ_HEADER * VM_VALUE_HASH_get( VM_VALUE_HASH *arr, VM_OBJ_HEADER *index );
+
+int VM_VALUE_HASH_set( VCONTEXT *ctx,  VM_VALUE_HASH *arr, VM_OBJ_HEADER *index, VM_OBJ_HEADER *rhs);
+
+int VM_VALUE_HASH_unset( VCONTEXT *ctx,  VM_VALUE_HASH *arr, VM_OBJ_HEADER *index);
+
+#endif

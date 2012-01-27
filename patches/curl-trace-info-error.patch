@@ -1,0 +1,32 @@
+diff -Nru curl-7.15.4/include/curl/curl.h curl-7.15.4-rob/include/curl/curl.h
+--- curl-7.15.4/include/curl/curl.h	2006-04-27 00:06:51.000000000 +0300
++++ curl-7.15.4-rob/include/curl/curl.h	2006-07-06 21:37:12.000000000 +0300
+@@ -220,6 +220,7 @@
+   CURLINFO_DATA_OUT,     /* 4 */
+   CURLINFO_SSL_DATA_IN,  /* 5 */
+   CURLINFO_SSL_DATA_OUT, /* 6 */
++  CURLINFO_ERROR,             /* 7 */
+   CURLINFO_END
+ } curl_infotype;
+ 
+diff -Nru curl-7.15.4/lib/sendf.c curl-7.15.4-rob/lib/sendf.c
+--- curl-7.15.4/lib/sendf.c	2006-05-05 13:24:27.000000000 +0300
++++ curl-7.15.4-rob/lib/sendf.c	2006-07-06 21:45:13.000000000 +0300
+@@ -258,7 +258,8 @@
+       data->state.buffer[len] = '\n';
+       data->state.buffer[++len] = '\0';
+     }
+-    Curl_debug(data, CURLINFO_TEXT, data->state.buffer, len, NULL);
++    /*Curl_debug(data, CURLINFO_TEXT, data->state.buffer, len, NULL); */
++    Curl_debug(data, CURLINFO_ERROR, data->state.buffer, len, NULL);
+   }
+ 
+   va_end(ap);
+@@ -517,6 +518,7 @@
+   case CURLINFO_TEXT:
+   case CURLINFO_HEADER_OUT:
+   case CURLINFO_HEADER_IN:
++  case CURLINFO_ERROR:
+     fwrite(s_infotype[type], 2, 1, data->set.err);
+     fwrite(ptr, size, 1, data->set.err);
+     break;

@@ -1,0 +1,69 @@
+/*
+*
+* 2007 Copyright (c) 
+* Michael Moser,  <moser.michael@gmail.com>                 
+* All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*/
+
+    Design:
+	
+    allocate big blocks
+		big block header has
+			- free list pointer
+			- number of elements used 
+			- eof-block
+			- cur-eof-allocated;
+		allocator has pointer to current block, where last succesful allocation has been done.
+		(i.e. where cur-eof-allocated < eof-block)
+
+   Design tradeoff - 
+		one free list per big block or one free list per allocator (all big blocks)?
+		PROBLEM:
+			Problem: as a block is freed we have to update element count in big block.
+			so as bigblock is no longer used - free it.
+
+		  how will we doe this
+		  - walk list of big blocks and find to which allocator we belong (bad)
+		  - global allocator has array { [ptr-to-bigblock] [eof-big-block-ptr] [num-free] }
+			find big block is by walking array (much faster then walking the linked list of blocks)
+	
+
+	free list per big block.
+		PRO:
+			- free: finding double free is easier: don't have to walk the whole thing.
+			- ? probably bull shit ?: freelist per bigblock may aid locality of stuff returned from malloc (by freelist usage)
+			- if big block is aligned to page size then get ofset is trivial AND op (can't do that here).
+
+	free list per allocator
+		PRO
+			- malloc is faster as global freelist always returns *something*; other solution
+			you have to bother with searching for non empty freelist; etc; etc;
+			- if you don't bother to release empty bigblock (not an option): find freelist entry is simpler		
+
+	decision: we stick with free list per allocator - fast malloc is more important.
+	  
+Update:    
+    Don't need any header for big block anymore - all data can be put
+	 into CHUNK_INFO array at the start of the allocator !!
+	 don't need no linked list of chunks also !!
+ 
+Q:
+   question - how can it be that a simple thing like fixed block
+   allocator got so complicated ?
+	- requirement to free big blocks as they are emptied; if we don't do that we don't have to find big block
+	  on free.
+

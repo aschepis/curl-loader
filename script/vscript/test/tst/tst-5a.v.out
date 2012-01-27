@@ -1,0 +1,16 @@
+*** syntax ok ***
+*** semantics and code generation ok ***
+
+>another string : c is the best language
+
+>name: a value: another string
+
+>name: c value: c is the best language
+
+>name: b value: before time
+
+>value: another string
+
+>value: c is the best language
+
+>value: before time

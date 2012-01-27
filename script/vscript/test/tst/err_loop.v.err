@@ -1,0 +1,9 @@
+
+tst/err_loop.v(8): error break must be within a while loop, right here it is not the case
+      8 |break
+        |^^^^^
+
+tst/err_loop.v(18): error break must be within a while loop, right here it is not the case
+     18 |    break
+        |....^^^^^
+*** ERROR semantics or code generation ***

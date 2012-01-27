@@ -1,0 +1,13 @@
+
+tst/err_undef_func.v(9): error calling function kuku that is not defined
+      9 |kuku(1,2,3)
+        |^^^^^^^^^^^
+
+tst/err_undef_func.v(12): error calling function nofunction that is defined as variable definition in row 2 column 3
+     12 |nofunction(44,5,6,7)
+        |^^^^^^^^^^^^^^^^^^^^
+
+tst/err_undef_func.v(16): error calling function hello that is defined with the same name but different parameters. function defined at row 4 column 1
+     16 |hello(1,2,3)
+        |^^^^^^^^^^^^
+*** ERROR semantics or code generation ***

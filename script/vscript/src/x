@@ -1,0 +1,415 @@
+Starting parse
+Entering state 0
+Reading a token: Next token is token TK_VAR_DEF (: )
+Shifting token TK_VAR_DEF (: )
+Entering state 11
+Reading a token: Next token is token TK_ID (: )
+Reducing stack by rule 37 (line 378):
+-> $$ = nterm varDefTypeSpec (: )
+Stack now 0 11
+Entering state 66
+Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 114
+Reading a token: Next token is token TK_WHILE (: )
+Reducing stack by rule 36 (line 365):
+   $1 = nterm varDefTypeSpec (: )
+   $2 = token TK_ID (: )
+-> $$ = nterm oneVarDefNoAssign (: )
+Stack now 0 11
+Entering state 65
+Reducing stack by rule 34 (line 347):
+   $1 = nterm oneVarDefNoAssign (: )
+-> $$ = nterm oneVarDef (: )
+Stack now 0 11
+Entering state 64
+Reducing stack by rule 33 (line 341):
+   $1 = nterm oneVarDef (: )
+-> $$ = nterm varDefList (: )
+Stack now 0 11
+Entering state 63
+Next token is token TK_WHILE (: )
+Reducing stack by rule 31 (line 331):
+   $1 = token TK_VAR_DEF (: )
+   $2 = nterm varDefList (: )
+-> $$ = nterm varDef (: )
+Stack now 0
+Entering state 19
+Reducing stack by rule 12 (line 205):
+   $1 = nterm varDef (: )
+-> $$ = nterm stmt (: )
+Stack now 0
+Entering state 15
+Reducing stack by rule 3 (line 167):
+   $1 = nterm stmt (: )
+-> $$ = nterm stmtList (: )
+Stack now 0
+Entering state 14
+Next token is token TK_WHILE (: )
+Reducing stack by rule 6 (line 180):
+-> $$ = nterm optColon (: )
+Stack now 0 14
+Entering state 72
+Next token is token TK_WHILE (: )
+Shifting token TK_WHILE (: )
+Entering state 10
+Reading a token: Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 43
+Reading a token: Next token is token TK_OP_NUM_LT (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10
+Entering state 58
+Reducing stack by rule 94 (line 796):
+   $1 = nterm varRef (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10
+Entering state 57
+Next token is token TK_OP_NUM_LT (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10
+Entering state 54
+Next token is token TK_OP_NUM_LT (: )
+Reducing stack by rule 75 (line 676):
+   $1 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10
+Entering state 53
+Next token is token TK_OP_NUM_LT (: )
+Reducing stack by rule 60 (line 602):
+   $1 = nterm addExp (: )
+-> $$ = nterm compExp (: )
+Stack now 0 14 72 10
+Entering state 52
+Next token is token TK_OP_NUM_LT (: )
+Shifting token TK_OP_NUM_LT (: )
+Entering state 84
+Reducing stack by rule 63 (line 616):
+   $1 = token TK_OP_NUM_LT (: )
+-> $$ = nterm compExpOp (: )
+Stack now 0 14 72 10 52
+Entering state 95
+Reading a token: Next token is token TK_INT_CONSTANT (: )
+Shifting token TK_INT_CONSTANT (: )
+Entering state 42
+Reducing stack by rule 95 (line 797):
+   $1 = token TK_INT_CONSTANT (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 52 95
+Entering state 57
+Reading a token: Next token is token TK_ID (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 52 95
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 52 95
+Entering state 54
+Next token is token TK_ID (: )
+Reducing stack by rule 75 (line 676):
+   $1 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10 52 95
+Entering state 125
+Next token is token TK_ID (: )
+Reducing stack by rule 59 (line 588):
+   $1 = nterm compExp (: )
+   $2 = nterm compExpOp (: )
+   $3 = nterm addExp (: )
+-> $$ = nterm compExp (: )
+Stack now 0 14 72 10
+Entering state 52
+Next token is token TK_ID (: )
+Reducing stack by rule 58 (line 582):
+   $1 = nterm compExp (: )
+-> $$ = nterm expr (: )
+Stack now 0 14 72 10
+Entering state 62
+Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 5
+Reading a token: Next token is token TK_ASSIGN (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10 62
+Entering state 28
+Next token is token TK_ASSIGN (: )
+Shifting token TK_ASSIGN (: )
+Entering state 73
+Reading a token: Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 43
+Reading a token: Next token is token TK_OP_NUM_ADD (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 58
+Reducing stack by rule 94 (line 796):
+   $1 = nterm varRef (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 57
+Next token is token TK_OP_NUM_ADD (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 54
+Next token is token TK_OP_NUM_ADD (: )
+Reducing stack by rule 75 (line 676):
+   $1 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 53
+Next token is token TK_OP_NUM_ADD (: )
+Shifting token TK_OP_NUM_ADD (: )
+Entering state 97
+Reducing stack by rule 78 (line 690):
+   $1 = token TK_OP_NUM_ADD (: )
+-> $$ = nterm addExpOp (: )
+Stack now 0 14 72 10 62 28 73 53
+Entering state 99
+Reading a token: Next token is token TK_INT_CONSTANT (: )
+Shifting token TK_INT_CONSTANT (: )
+Entering state 42
+Reducing stack by rule 95 (line 797):
+   $1 = token TK_INT_CONSTANT (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 62 28 73 53 99
+Entering state 57
+Reading a token: Next token is token TK_IF (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 62 28 73 53 99
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 62 28 73 53 99
+Entering state 126
+Next token is token TK_IF (: )
+Reducing stack by rule 74 (line 662):
+   $1 = nterm addExp (: )
+   $2 = nterm addExpOp (: )
+   $3 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 53
+Next token is token TK_IF (: )
+Reducing stack by rule 60 (line 602):
+   $1 = nterm addExp (: )
+-> $$ = nterm compExp (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 52
+Next token is token TK_IF (: )
+Reducing stack by rule 58 (line 582):
+   $1 = nterm compExp (: )
+-> $$ = nterm expr (: )
+Stack now 0 14 72 10 62 28 73
+Entering state 117
+Reducing stack by rule 44 (line 431):
+   $1 = nterm varRef (: )
+   $2 = token TK_ASSIGN (: )
+   $3 = nterm expr (: )
+-> $$ = nterm assignStmt (: )
+Stack now 0 14 72 10 62
+Entering state 23
+Reducing stack by rule 11 (line 201):
+   $1 = nterm assignStmt (: )
+-> $$ = nterm stmt (: )
+Stack now 0 14 72 10 62
+Entering state 15
+Reducing stack by rule 3 (line 167):
+   $1 = nterm stmt (: )
+-> $$ = nterm stmtList (: )
+Stack now 0 14 72 10 62
+Entering state 112
+Next token is token TK_IF (: )
+Reducing stack by rule 6 (line 180):
+-> $$ = nterm optColon (: )
+Stack now 0 14 72 10 62 112
+Entering state 72
+Next token is token TK_IF (: )
+Shifting token TK_IF (: )
+Entering state 9
+Reading a token: Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 43
+Reading a token: Next token is token TK_OP_NUM_MULT (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 58
+Reducing stack by rule 94 (line 796):
+   $1 = nterm varRef (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 57
+Next token is token TK_OP_NUM_MULT (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 54
+Next token is token TK_OP_NUM_MULT (: )
+Shifting token TK_OP_NUM_MULT (: )
+Entering state 101
+Reducing stack by rule 82 (line 720):
+   $1 = token TK_OP_NUM_MULT (: )
+-> $$ = nterm multExpOp (: )
+Stack now 0 14 72 10 62 112 72 9 54
+Entering state 103
+Reading a token: Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 43
+Reading a token: Next token is token TK_OP_NUM_GT (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10 62 112 72 9 54 103
+Entering state 58
+Reducing stack by rule 94 (line 796):
+   $1 = nterm varRef (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 62 112 72 9 54 103
+Entering state 57
+Next token is token TK_OP_NUM_GT (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 62 112 72 9 54 103
+Entering state 127
+Reducing stack by rule 79 (line 696):
+   $1 = nterm multExp (: )
+   $2 = nterm multExpOp (: )
+   $3 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 54
+Next token is token TK_OP_NUM_GT (: )
+Reducing stack by rule 75 (line 676):
+   $1 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 53
+Next token is token TK_OP_NUM_GT (: )
+Reducing stack by rule 60 (line 602):
+   $1 = nterm addExp (: )
+-> $$ = nterm compExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 52
+Next token is token TK_OP_NUM_GT (: )
+Shifting token TK_OP_NUM_GT (: )
+Entering state 85
+Reducing stack by rule 64 (line 620):
+   $1 = token TK_OP_NUM_GT (: )
+-> $$ = nterm compExpOp (: )
+Stack now 0 14 72 10 62 112 72 9 52
+Entering state 95
+Reading a token: Next token is token TK_INT_CONSTANT (: )
+Shifting token TK_INT_CONSTANT (: )
+Entering state 42
+Reducing stack by rule 95 (line 797):
+   $1 = token TK_INT_CONSTANT (: )
+-> $$ = nterm primaryExp (: )
+Stack now 0 14 72 10 62 112 72 9 52 95
+Entering state 57
+Reading a token: Next token is token TK_ID (: )
+Reducing stack by rule 86 (line 757):
+   $1 = nterm primaryExp (: )
+-> $$ = nterm unaryExp (: )
+Stack now 0 14 72 10 62 112 72 9 52 95
+Entering state 55
+Reducing stack by rule 80 (line 710):
+   $1 = nterm unaryExp (: )
+-> $$ = nterm multExp (: )
+Stack now 0 14 72 10 62 112 72 9 52 95
+Entering state 54
+Next token is token TK_ID (: )
+Reducing stack by rule 75 (line 676):
+   $1 = nterm multExp (: )
+-> $$ = nterm addExp (: )
+Stack now 0 14 72 10 62 112 72 9 52 95
+Entering state 125
+Next token is token TK_ID (: )
+Reducing stack by rule 59 (line 588):
+   $1 = nterm compExp (: )
+   $2 = nterm compExpOp (: )
+   $3 = nterm addExp (: )
+-> $$ = nterm compExp (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 52
+Next token is token TK_ID (: )
+Reducing stack by rule 58 (line 582):
+   $1 = nterm compExp (: )
+-> $$ = nterm expr (: )
+Stack now 0 14 72 10 62 112 72 9
+Entering state 61
+Next token is token TK_ID (: )
+Shifting token TK_ID (: )
+Entering state 5
+Reading a token: Next token is token TK_END (: )
+Reducing stack by rule 100 (line 842):
+   $1 = token TK_ID (: )
+-> $$ = nterm varRef (: )
+Stack now 0 14 72 10 62 112 72 9 61
+Entering state 28
+Next token is token TK_END (: )
+
+../regression/src/ok_while.v(10): error syntax error, unexpected TK_END, expecting TK_ASSIGN
+     10 |  end
+        |..^^^
+Error: popping nterm varRef (: )
+Stack now 0 14 72 10 62 112 72 9 61
+Shifting token error (: )
+Entering state 1
+Next token is token TK_END (: )
+Error: discarding token TK_END (: )
+Error: popping token error (: )
+Stack now 0 14 72 10 62 112 72 9 61
+Shifting token error (: )
+Entering state 1
+Reading a token: Next token is token TK_END (: )
+Error: discarding token TK_END (: )
+Error: popping token error (: )
+Stack now 0 14 72 10 62 112 72 9 61
+Shifting token error (: )
+Entering state 1
+Reading a token: Now at end of input.
+Stack now 0 14 72 10 62 112 72 9 61 1
+Cleanup: popping token error (: )
+Cleanup: popping nterm expr (: )
+Cleanup: popping token TK_IF (: )
+Cleanup: popping nterm optColon (: )
+Cleanup: popping nterm stmtList (: )
+Cleanup: popping nterm expr (: )
+Cleanup: popping token TK_WHILE (: )
+Cleanup: popping nterm optColon (: )
+Cleanup: popping nterm stmtList (: )
+*** ERROR: some kind of syntax error ***
